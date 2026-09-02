@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open in Chrome (Direct File)",
+            "file": "${workspaceFolder}/index.html"
+        },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Open in Edge (Direct File)",
+            "file": "${workspaceFolder}/index.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome with Local Server (http://localhost:8080)",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "Start Local Server"
+        },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Launch Edge with Local Server (http://localhost:8080)",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "Start Local Server"
+        }
+    ]
+}
