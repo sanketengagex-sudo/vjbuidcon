@@ -1,16 +1,34 @@
 # Zero-dependency local static HTTP server for Windows PowerShell
 param([int]$Port = 8080)
 
-$listener = New-Object System.Net.HttpListener
-$prefix = "http://localhost:$Port/"
-$listener.Prefixes.Add($prefix)
+$portsToTry = @($Port, 8085, 8090, 3000, 5000)
+$started = $false
+$listener = $null
+$activePort = $Port
 
-try {
-    $listener.Start()
-} catch {
-    Write-Host "Error starting server on $prefix : $_" -ForegroundColor Red
+foreach ($p in $portsToTry) {
+    try {
+        $candidate = New-Object System.Net.HttpListener
+        $prefix = "http://localhost:$p/"
+        $candidate.Prefixes.Add($prefix)
+        $candidate.Start()
+        $listener = $candidate
+        $activePort = $p
+        $started = $true
+        break
+    } catch {
+        if ($candidate) {
+            try { $candidate.Close() } catch {}
+        }
+    }
+}
+
+if (-not $started) {
+    Write-Host "Error: Could not bind local HTTP server to any available port ($($portsToTry -join ', '))." -ForegroundColor Red
     exit 1
 }
+
+$prefix = "http://localhost:$activePort/"
 
 Write-Host "==========================================================" -ForegroundColor Cyan
 Write-Host "  Vishal Jamdhade Buildcon - Local Web Server" -ForegroundColor Yellow
