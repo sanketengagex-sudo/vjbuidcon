@@ -11,20 +11,6 @@
   z-index: 1000;
   transition: all var(--transition-smooth);
   background-color: transparent;
-  padding: 1.5rem 0;
-}
-
-.site-header.scrolled {
-  background-color: rgba(17, 17, 17, 0.88);
-  backdrop-filter: blur(16px);
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  transition: all var(--transition-smooth);
-  background-color: transparent;
   padding: 1.15rem 0;
 }
 

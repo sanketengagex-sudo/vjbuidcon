@@ -40,9 +40,9 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-top: clamp(6.5rem, 12vh, 8.5rem);
-  padding-bottom: 2.5rem;
+  justify-content: center;
+  padding-top: clamp(6.5rem, 10vh, 8rem);
+  padding-bottom: 3.5rem;
   background-color: #0E0E0E;
   background-image: 
     radial-gradient(circle at 75% 30%, rgba(83, 107, 120, 0.25) 0%, transparent 55%),
