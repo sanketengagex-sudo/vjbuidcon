@@ -1,6 +1,6 @@
 /**
- * VISHAL JAMDHADE BUILDCON - PROJECT ESTIMATOR CALCULATOR
- * Dynamic computation of scope, deliverables, timeline and proposal prefill
+ * VISHAL JAMDHADE BUILDCON — ESTIMATOR ENGINE
+ * Authentic rates, dynamic timeline, scope computation, and contact prefill
  */
 
 const projectEstimator = {
@@ -60,10 +60,10 @@ const projectEstimator = {
   },
 
   bindEvents() {
-    // Type buttons
+    // Project Type Buttons
     const typeBtns = document.querySelectorAll('.calc-type-btn');
     typeBtns.forEach(btn => {
-      btn.addEventListener('click', (e) => {
+      btn.addEventListener('click', () => {
         typeBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         this.currentType = btn.dataset.type;
@@ -71,7 +71,7 @@ const projectEstimator = {
       });
     });
 
-    // Range slider
+    // Area Slider
     const slider = document.getElementById('calcAreaSlider');
     const areaValDisplay = document.getElementById('calcAreaValue');
     if (slider) {
@@ -84,7 +84,7 @@ const projectEstimator = {
       });
     }
 
-    // Package radio items
+    // Package Selector Items
     const pkgItems = document.querySelectorAll('.service-option-item');
     pkgItems.forEach(item => {
       item.addEventListener('click', () => {
@@ -99,7 +99,7 @@ const projectEstimator = {
       });
     });
 
-    // Transfer estimate to lead form
+    // Transfer button
     const applyEstimateBtn = document.getElementById('applyEstimateBtn');
     if (applyEstimateBtn) {
       applyEstimateBtn.addEventListener('click', () => {
@@ -111,23 +111,20 @@ const projectEstimator = {
   calculate() {
     const typeConfig = this.rates[this.currentType] || this.rates.bungalow;
     const pkgConfig = typeConfig[this.currentPackage] || typeConfig.full;
-    
-    // Calculate estimated total & timeline
+
     const estimatedCost = Math.round(this.currentArea * pkgConfig.ratePerSqft);
     const minRange = Math.round(estimatedCost * 0.9);
     const maxRange = Math.round(estimatedCost * 1.1);
-    
-    // Timeline calculation based on area scale
+
     const scaleFactor = Math.max(1, Math.log10(this.currentArea / 1000));
     const finalDays = Math.round(pkgConfig.days * scaleFactor);
 
-    // Update DOM
     const costElem = document.getElementById('estCostRange');
     const daysElem = document.getElementById('estDaysRange');
     const delivList = document.getElementById('estDeliverablesList');
 
     if (costElem) {
-      costElem.textContent = `₹${minRange.toLocaleString()} - ₹${maxRange.toLocaleString()}`;
+      costElem.textContent = `₹${minRange.toLocaleString('en-IN')} - ₹${maxRange.toLocaleString('en-IN')}`;
     }
 
     if (daysElem) {
@@ -148,7 +145,6 @@ const projectEstimator = {
   },
 
   transferToContactForm() {
-    // Populate form fields
     const formType = document.getElementById('formProjectType');
     const formArea = document.getElementById('formPlotArea');
     const formService = document.getElementById('formService');
@@ -157,8 +153,8 @@ const projectEstimator = {
     const typeLabels = {
       bungalow: 'Bungalow',
       rowhouse: 'Row House',
-      commercial: 'Commercial',
-      warehouse: 'Warehouse'
+      commercial: 'Commercial Complex',
+      warehouse: 'Warehouse / PEB'
     };
 
     const serviceLabels = {
@@ -169,24 +165,18 @@ const projectEstimator = {
 
     if (formType) formType.value = typeLabels[this.currentType] || 'Bungalow';
     if (formArea) formArea.value = `${this.currentArea} sq.ft`;
-    if (formService) formService.value = serviceLabels[this.currentPackage] || 'Full Turnkey';
+    if (formService) formService.value = serviceLabels[this.currentPackage] || 'Full Turnkey (2D + 3D + RCC)';
     if (formMsg) {
-      formMsg.value = `Hello Vishal Jamdhade Buildcon, I calculated an estimate for my ${typeLabels[this.currentType]} project (${this.currentArea} sq.ft) requiring ${serviceLabels[this.currentPackage]}. Please provide a formal engineering and design proposal.`;
+      formMsg.value = `Hello Vishal Jamdhade Buildcon, I calculated an estimate for my ${typeLabels[this.currentType]} project (${this.currentArea} sq.ft) requiring ${serviceLabels[this.currentPackage]}. Please provide an official architectural and structural engineering proposal.`;
     }
 
-    // Smooth scroll to contact
     const contactSection = document.getElementById('contact');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Trigger visual toast
-    if (window.showToast) {
-      window.showToast("Estimator details transferred to contact form below!");
+    if (window.showSiteToast) {
+      window.showSiteToast("Estimator details transferred to the enquiry form below!");
     }
   }
 };
-
-document.addEventListener('DOMContentLoaded', () => {
-  projectEstimator.init();
-});

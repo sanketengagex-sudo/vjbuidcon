@@ -3,29 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vishal Jamdhade Buildcon | Architecture, Planning & Structural Design Solutions</title>
+  
+  <title>Vishal Jamdhade Buildcon | Architecture & Structural Engineering</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Vishal Jamdhade Buildcon - Building Trust, Creating Legacy. Premier Architecture, 2D CAD Floor Plans, 3D Visualization, RCC & Steel Structural Design for Residential, Commercial & Industrial projects. Call: 99 23 43 83 73.">
-  <meta name="keywords" content="Architecture Design, 2D Floor Plan, 3D House Design, Structural Design, RCC Structural Design, Steel Structure Design, Row House Planning, Flat Planning, Commercial Building Design, Building Plan, Working Drawing, BOQ, Quantity Estimation, Architectural Consultant, Structural Consultant, Vishal Jamdhade Buildcon">
+  <meta name="description" content="Professional architecture, 2D planning, 3D visualization, RCC structural design, steel structures, BOQ and construction drawing solutions across Maharashtra.">
+  <meta name="keywords" content="Vishal Jamdhade Buildcon, Architecture Design, Structural Engineering, 2D Floor Plan, 3D Architectural Visualization, RCC Structural Design, PEB Warehouse Design, Pune, Nashik, Sambhajinagar, Maharashtra">
   <meta name="author" content="Vishal Jamdhade Buildcon">
   <meta name="robots" content="index, follow">
 
   <!-- OpenGraph / Social Meta -->
-  <meta property="og:title" content="Vishal Jamdhade Buildcon | Architecture & Structural Design Solutions">
-  <meta property="og:description" content="Plan. Design. Visualize. Build. Complete 2D Planning, 3D Visualization & Structural Engineering for Residential, Commercial & Industrial Projects.">
+  <meta property="og:title" content="Vishal Jamdhade Buildcon | Architecture & Structural Engineering">
+  <meta property="og:description" content="Building Trust, Creating Legacy. Integrated 2D Planning, 3D Photorealistic Visualization, and IS-Code Compliant RCC & Steel Structural Engineering.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/images/hero_render.jpg">
+  <meta property="og:image" content="assets/images/hero_luxury_villa.jpg">
 
-  <!-- Structured Data (JSON-LD) for Local Architectural Business -->
+  <!-- Schema.org JSON-LD for Local Architectural Business -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ArchitecturalService",
     "name": "Vishal Jamdhade Buildcon",
-    "alternateName": "VJB Architecture & Structural Consultants",
-    "description": "Integrated Architectural Planning, 2D CAD Layouts, 3D Photorealistic Visualization, and RCC / Steel Structural Design Consultancy.",
+    "alternateName": "VJB Architecture & Structural Engineering Consultancy",
+    "description": "Premier integrated architectural planning, 3D photorealistic visualization, and RCC / Steel structural engineering consultancy across Maharashtra.",
     "telephone": "+919923438373",
+    "email": "vishaljamdhade.buildcon@gmail.com",
     "slogan": "Building Trust, Creating Legacy",
     "priceRange": "₹₹",
     "currenciesAccepted": "INR",
@@ -34,75 +36,79 @@
     "areaServed": ["Pune", "Nashik", "Chhatrapati Sambhajinagar", "Mumbai", "Maharashtra"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Architectural & Structural Engineering Services",
+      "name": "Architectural & Structural Services",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "2D Planning & Architectural Drawings" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "3D Design & Visualization" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "RCC Structural Design" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "2D Architectural Planning & Drawings" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "3D Photorealistic Visualization" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "RCC Structural Design & FEA Analysis" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Steel Structure Design & PEB Sheds" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Working & Construction Drawings" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Working & Construction Drawings (GFC)" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Quantity Estimation & BOQ" } }
       ]
     }
   }
   </script>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+
+  <!-- Three.js & OrbitControls from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
 
-  <!-- Blueprint Background Grid Lines -->
-  <div class="blueprint-grid-overlay"></div>
+  <!-- CAD Background Grid Overlay -->
+  <div class="cad-grid-pattern"></div>
 
   <!-- =========================================================================
        1. HEADER & NAVIGATION
        ========================================================================= -->
   <header class="site-header" id="siteHeader">
-    <div class="container header-container">
+    <div class="container header-inner">
       <!-- Brand Logo -->
       <a href="#home" class="brand-logo" id="brandLogo">
-        <div class="logo-symbol">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-          </svg>
-        </div>
-        <div class="brand-text">
-          <span class="brand-name">VISHAL JAMDHADE <span>BUILDCON</span></span>
+        <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <div class="brand-text-block">
+          <span class="brand-title">VISHAL JAMDHADE <span>BUILDCON</span></span>
           <span class="brand-tagline" data-i18n="tagline">Building Trust, Creating Legacy</span>
         </div>
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <nav class="nav-menu" id="desktopNav">
+      <nav class="nav-menu" id="desktopNav" aria-label="Main Navigation">
         <a href="#home" class="nav-link active" data-i18n="nav_home">Home</a>
         <a href="#about" class="nav-link" data-i18n="nav_about">About Us</a>
         <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
-        <a href="#showcase" class="nav-link" data-i18n="nav_residential">Residential</a>
-        <a href="#commercial" class="nav-link" data-i18n="nav_commercial">Commercial</a>
-        <a href="#structural" class="nav-link" data-i18n="nav_structural">Structural Design</a>
+        <a href="#experience3d" class="nav-link">3D Studio</a>
+        <a href="#showcase" class="nav-link" data-i18n="nav_showcase">Lifecycle</a>
         <a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a>
+        <a href="#structural" class="nav-link" data-i18n="nav_structural">Structural</a>
         <a href="#estimator" class="nav-link" data-i18n="nav_estimator">Estimator</a>
         <a href="#process" class="nav-link" data-i18n="nav_process">Process</a>
+        <a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a>
         <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
       </nav>
 
       <!-- Header Actions -->
       <div class="header-actions">
         <!-- Bilingual Switcher: EN | मराठी -->
-        <div class="lang-switcher" id="langSwitcher" title="Change Language / भाषा बदला">
+        <div class="lang-switch" id="langSwitch" title="Switch Language / भाषा बदला">
           <button class="lang-btn active" data-lang="en">EN</button>
           <button class="lang-btn" data-lang="mr">मराठी</button>
         </div>
 
         <!-- Consultation Button -->
-        <a href="#contact" class="btn btn-primary btn-sm header-cta" id="headerConsultBtn" data-i18n="btn_free_consultation">
-          Get Free Consultation
+        <a href="#contact" class="btn btn-outline-gold btn-sm" id="headerCtaBtn" data-i18n="btn_get_consultation">
+          Get Consultation
         </a>
 
         <!-- Mobile Drawer Toggle -->
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu">
           <span></span>
           <span></span>
           <span></span>
@@ -112,1355 +118,1392 @@
   </header>
 
   <!-- Mobile Drawer Menu -->
-  <div class="mobile-nav-drawer" id="mobileDrawer">
-    <div class="mobile-nav-links">
-      <a href="#home" class="mobile-nav-link" data-i18n="nav_home">Home</a>
-      <a href="#about" class="mobile-nav-link" data-i18n="nav_about">About Us</a>
-      <a href="#services" class="mobile-nav-link" data-i18n="nav_services">Services</a>
-      <a href="#showcase" class="mobile-nav-link" data-i18n="nav_residential">Residential Projects</a>
-      <a href="#commercial" class="mobile-nav-link" data-i18n="nav_commercial">Commercial & Industrial</a>
-      <a href="#structural" class="mobile-nav-link" data-i18n="nav_structural">Structural Design</a>
-      <a href="#projects" class="mobile-nav-link" data-i18n="nav_projects">Project Portfolio</a>
-      <a href="#estimator" class="mobile-nav-link" data-i18n="nav_estimator">Project Estimator</a>
-      <a href="#process" class="mobile-nav-link" data-i18n="nav_process">Our Process</a>
-      <a href="#faq" class="mobile-nav-link">FAQs</a>
-      <a href="#contact" class="mobile-nav-link" data-i18n="nav_contact">Contact Us</a>
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-drawer-links">
+      <a href="#home" class="mobile-drawer-link" data-i18n="nav_home">Home</a>
+      <a href="#about" class="mobile-drawer-link" data-i18n="nav_about">About Us</a>
+      <a href="#services" class="mobile-drawer-link" data-i18n="nav_services">Services</a>
+      <a href="#experience3d" class="mobile-drawer-link">3D Studio</a>
+      <a href="#showcase" class="mobile-drawer-link" data-i18n="nav_showcase">Lifecycle</a>
+      <a href="#projects" class="mobile-drawer-link" data-i18n="nav_projects">Projects</a>
+      <a href="#structural" class="mobile-drawer-link" data-i18n="nav_structural">Structural Design</a>
+      <a href="#estimator" class="mobile-drawer-link" data-i18n="nav_estimator">Estimator</a>
+      <a href="#process" class="mobile-drawer-link" data-i18n="nav_process">Our Process</a>
+      <a href="#why-us" class="mobile-drawer-link" data-i18n="nav_why">Why Us</a>
+      <a href="#faq" class="mobile-drawer-link" data-i18n="nav_faq">FAQ</a>
+      <a href="#contact" class="mobile-drawer-link" data-i18n="nav_contact">Contact Us</a>
     </div>
     <div class="mobile-drawer-footer">
-      <a href="tel:+919923438373" class="btn btn-outline btn-sm">
+      <a href="tel:+919923438373" class="btn btn-outline-white btn-sm" style="width: 100%;">
         📞 99 23 43 83 73
       </a>
-      <a href="#contact" class="btn btn-primary btn-sm" data-i18n="btn_free_consultation">
+      <a href="#contact" class="btn btn-primary btn-sm" style="width: 100%;" data-i18n="btn_free_consultation">
         Get Free Consultation
       </a>
     </div>
   </div>
 
-  <!-- =========================================================================
-       2. HERO SECTION
-       ========================================================================= -->
-  <section class="hero-section" id="home">
-    <div class="container">
-      <div class="hero-grid">
-        <!-- Hero Content Left -->
-        <div class="hero-content">
-          <div class="hero-badge-container">
-            <span class="blueprint-coordinate-tag" data-i18n="hero_coord">
-              CAD SCALE 1:100 • ARCH & STRUCTURAL STUDIO
-            </span>
+  <main>
+    <!-- =========================================================================
+         2. HERO SECTION
+         ========================================================================= -->
+    <section class="hero-section" id="home">
+      <!-- Background Luxury Villa Render Overlay -->
+      <div class="hero-bg-layer">
+        <img src="assets/images/hero_luxury_villa.jpg" alt="Architectural Contemporary Luxury Villa Design by Vishal Jamdhade Buildcon" id="heroBgImg">
+      </div>
+
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Hero Text Left -->
+          <div class="hero-content-col">
+            <div class="hero-eyebrow" data-i18n="hero_eyebrow">
+              <span class="pulse-indicator"></span>
+              ARCHITECTURE • STRUCTURAL ENGINEERING • 3D VISUALIZATION
+            </div>
+
+            <h1 class="hero-title">
+              WE DESIGN <br>
+              THE SPACE. <br>
+              WE ENGINEER <br>
+              THE <span class="gold-word">FUTURE.</span>
+            </h1>
+
+            <p class="hero-description" data-i18n="hero_subheadline">
+              Complete architectural planning, 3D visualization and structural engineering solutions for residential, commercial and industrial projects across Maharashtra.
+            </p>
+
+            <div class="hero-cta-row">
+              <a href="#estimator" class="btn btn-primary btn-lg" id="heroStartBtn" data-i18n="hero_cta_start">
+                Start Your Project
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="#projects" class="btn btn-outline-white btn-lg" id="heroExploreBtn" data-i18n="hero_cta_explore">
+                Explore Projects
+              </a>
+            </div>
+
+            <!-- Trust Chips -->
+            <div class="hero-trust-chips">
+              <div class="trust-chip">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="trust_2d">2D Planning</span>
+              </div>
+              <div class="trust-chip">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="trust_3d">3D Visualization</span>
+              </div>
+              <div class="trust-chip">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="trust_rcc">RCC Structural Design</span>
+              </div>
+              <div class="trust-chip">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="trust_steel">Steel Structure Design</span>
+              </div>
+              <div class="trust-chip">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="trust_working">Working Drawings</span>
+              </div>
+              <div class="trust-chip">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span data-i18n="trust_consult">Project Consultation</span>
+              </div>
+            </div>
           </div>
 
-          <h1 class="hero-title" data-i18n="hero_headline">
-            Plan. Design. <br><span class="accent">Visualize. Build.</span>
-          </h1>
+          <!-- Hero Visual Right -->
+          <div class="hero-visual-col">
+            <div class="hero-media-card cad-corner-box">
+              <img src="assets/images/hero_render.jpg" alt="Contemporary Villa Architecture and Structural Model by Vishal Jamdhade Buildcon" id="heroRenderImg">
+              <div class="hero-cad-label">
+                <span>PROJECT LIVE: RESIDENTIAL & COMMERCIAL COMPLEX</span>
+                <span class="technical-coord">SCALE 1:100</span>
+              </div>
+            </div>
 
-          <p class="hero-desc" data-i18n="hero_subheadline">
-            Complete 2D Planning, 3D Visualization & Structural Design Solutions for Residential, Commercial and Industrial Projects.
-          </p>
-
-          <div class="hero-cta-group">
-            <a href="#contact" class="btn btn-primary btn-lg" id="heroCtaConsult" data-i18n="btn_free_consultation">
-              Get Free Consultation
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
-            <a href="#projects" class="btn btn-outline btn-lg" id="heroCtaProjects" data-i18n="hero_cta_projects">
-              View Our Projects
-            </a>
-          </div>
-
-          <!-- Trust Badges -->
-          <div class="hero-trust-list">
-            <div class="trust-item">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-i18n="trust_2d">2D Planning</span>
-            </div>
-            <div class="trust-item">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-i18n="trust_3d">3D Visualization</span>
-            </div>
-            <div class="trust-item">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-i18n="trust_rcc">RCC Structural Design</span>
-            </div>
-            <div class="trust-item">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-i18n="trust_steel">Steel Structure Design</span>
-            </div>
-            <div class="trust-item">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-i18n="trust_working">Working Drawings</span>
-            </div>
-            <div class="trust-item">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-i18n="trust_consultation">Project Consultation</span>
+            <!-- Floating Certified Engineering Badge -->
+            <div class="hero-floating-badge">
+              <div class="floating-badge-icon">📐</div>
+              <div class="floating-badge-text">
+                <h5>IS Code Certified</h5>
+                <p>IS 456, IS 800 & IS 1893 Compliant</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Hero Architectural Image Right -->
-        <div class="hero-media-wrapper">
-          <div class="hero-image-frame">
-            <img src="assets/images/hero_render.jpg" alt="Architectural Rendering and Structural Blueprint Design by Vishal Jamdhade Buildcon" id="heroMainImg">
-            <div class="hero-cad-label">
-              <span>PROJECT LIVE: RESIDENTIAL & COMMERCIAL COMPLEX</span>
-            </div>
+        <!-- Verified Stats Ribbon -->
+        <div class="hero-stats-ribbon">
+          <div class="hero-stat-item">
+            <span class="hero-stat-number">150<span class="gold-plus">+</span></span>
+            <span class="hero-stat-label" data-i18n="stat_projects_label">Projects Designed</span>
           </div>
-
-          <!-- Floating Architectural Badge -->
-          <div class="hero-floating-card animate-float">
-            <div class="floating-icon">📐</div>
-            <div class="floating-text">
-              <h5>IS Code Certified</h5>
-              <p>IS 456, IS 800 & IS 1893 Compliant Engineering</p>
-            </div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-number">12<span class="gold-plus">+</span></span>
+            <span class="hero-stat-label" data-i18n="stat_years_label">Years Industry Experience</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-number">1.5M<span class="gold-plus">+</span></span>
+            <span class="hero-stat-label" data-i18n="stat_area_label">Sq.Ft Planned & Engineered</span>
+          </div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-number">100<span class="gold-plus">%</span></span>
+            <span class="hero-stat-label" data-i18n="stat_safety_label">Structural Safety & IS Codes</span>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Live Counter Ribbon -->
-      <div class="hero-stats-ribbon">
-        <div class="stat-item">
-          <span class="stat-number" data-i18n="stat_projects_num">150+</span>
-          <span class="stat-label" data-i18n="stat_projects_label">Projects Designed</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-i18n="stat_years_num">12+</span>
-          <span class="stat-label" data-i18n="stat_years_label">Years Industry Experience</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-i18n="stat_safety_num">100%</span>
-          <span class="stat-label" data-i18n="stat_safety_label">Structural Safety & IS Codes</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-i18n="stat_area_num">1.5M+</span>
-          <span class="stat-label" data-i18n="stat_area_label">Sq.Ft Planned & Engineered</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       3. ABOUT US SECTION
-       ========================================================================= -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <!-- Visual with Badge -->
-        <div class="about-visual">
-          <div class="about-image-card">
-            <img src="assets/images/commercial_complex.jpg" alt="About Vishal Jamdhade Buildcon Architecture Firm">
-            <div class="about-seal-badge">
-              <span class="seal-years">12+</span>
+    <!-- =========================================================================
+         3. ABOUT SECTION (WARM ARCHITECTURAL WHITE #F6F4EF)
+         ========================================================================= -->
+    <section class="site-section section-about" id="about">
+      <div class="container">
+        <div class="about-editorial-grid">
+          <!-- Left Visual Stack -->
+          <div class="about-visual-stack">
+            <div class="about-main-image cad-corner-box">
+              <img src="assets/images/commercial_complex.jpg" alt="Vishal Jamdhade Buildcon Commercial & Residential Architecture Firm">
+            </div>
+            <!-- Seal Badge -->
+            <div class="about-seal-card">
+              <span class="seal-num">12+</span>
               <span class="seal-text">Years of Architectural Trust</span>
             </div>
           </div>
-        </div>
 
-        <!-- Content -->
-        <div class="about-content">
-          <div class="section-tag" data-i18n="about_tag">ABOUT THE FIRM</div>
-          <h2 class="section-title text-gradient" data-i18n="about_title">
-            Integrated Architectural Planning & Structural Engineering
-          </h2>
-          <p data-i18n="about_p1">
-            Vishal Jamdhade Buildcon is a premier architecture and structural design consultancy dedicated to delivering construction-friendly planning, accurate structural engineering, and realistic 3D architectural visualization.
-          </p>
-          <p data-i18n="about_p2">
-            Whether you are developing a luxury bungalow, multi-story apartment, commercial showroom, or an industrial PEB warehouse, our team ensures every millimeter is optimized for aesthetic elegance, safety compliance, and cost efficiency.
-          </p>
-
-          <!-- 4 Feature Pillars -->
-          <div class="about-features-list">
-            <div class="feature-box">
-              <h4>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span data-i18n="feat_1_title">Practical Planning</span>
-              </h4>
-              <p data-i18n="feat_1_desc">100% construction-friendly 2D layouts maximizing natural airflow, light, and Vaastu harmony.</p>
-            </div>
-            <div class="feature-box">
-              <h4>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span data-i18n="feat_2_title">Accurate Structural Design</span>
-              </h4>
-              <p data-i18n="feat_2_desc">Advanced seismic & wind analysis using IS 456, IS 800, and IS 1893 design codes.</p>
-            </div>
-            <div class="feature-box">
-              <h4>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span data-i18n="feat_3_title">Photorealistic 3D</span>
-              </h4>
-              <p data-i18n="feat_3_desc">High-definition exterior elevations and walkthroughs so you see the final building before construction begins.</p>
-            </div>
-            <div class="feature-box">
-              <h4>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span data-i18n="feat_4_title">End-to-End Support</span>
-              </h4>
-              <p data-i18n="feat_4_desc">Complete working drawings, BOQ estimation, and direct site consultation until project handover.</p>
-            </div>
-          </div>
-
-          <div style="margin-top: 1rem;">
-            <a href="#contact" class="btn btn-primary" data-i18n="btn_free_consultation">
-              Discuss Your Project With Us
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       4. OUR SERVICES SECTION (8 SPECIALIZED DISCIPLINES)
-       ========================================================================= -->
-  <section class="section" id="services" style="background: rgba(11, 19, 37, 0.45);">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag" data-i18n="services_tag">SPECIALIZED DISCIPLINES</div>
-        <h2 class="section-title text-gradient" data-i18n="services_title">End-to-End Architectural & Engineering Services</h2>
-        <p class="section-subtitle" data-i18n="services_subtitle">
-          From conceptual 2D floor plans to complex structural finite element analysis and on-site guidance.
-        </p>
-      </div>
-
-      <div class="services-grid">
-        <!-- Service 1: 2D Planning -->
-        <div class="service-card cad-corner-box">
-          <div>
-            <div class="service-card-top">
-              <div class="service-icon-box">📐</div>
-              <span class="service-code">SVC-01</span>
-            </div>
-            <h3 data-i18n="srv_1_title">2D Planning & Architectural Drawings</h3>
-            <p class="service-summary" data-i18n="srv_1_desc">
-              Precision space planning, dimensioned architectural floor plans, furniture layouts, and municipal sanction drawings.
+          <!-- Right Content -->
+          <div class="about-text-content">
+            <div class="section-tag" data-i18n="about_tag">ABOUT THE FIRM</div>
+            <h2 class="section-title section-title-dark" data-i18n="about_title">
+              From an Idea to a Structure That Stands for Years.
+            </h2>
+            <p data-i18n="about_p1">
+              Vishal Jamdhade Buildcon is a premier architecture and structural engineering consultancy dedicated to delivering construction-friendly planning, accurate structural calculations, and realistic 3D architectural visualization.
             </p>
-            <ul class="service-deliverables">
-              <li>Detailed Floor Plans & Room Dimensions</li>
-              <li>Functional Space & Furniture Layouts</li>
-              <li>Dimensioned Cross-Sections & Elevations</li>
-              <li>Municipal Authority Submission Plans</li>
-            </ul>
-          </div>
-          <div class="service-card-action">
-            <a href="#contact" class="btn btn-outline btn-sm" style="width: 100%;">Enquire For 2D Planning</a>
-          </div>
-        </div>
-
-        <!-- Service 2: 3D Visualization -->
-        <div class="service-card cad-corner-box">
-          <div>
-            <div class="service-card-top">
-              <div class="service-icon-box">🏛️</div>
-              <span class="service-code">SVC-02</span>
-            </div>
-            <h3 data-i18n="srv_2_title">3D Design & Photorealistic Visualization</h3>
-            <p class="service-summary" data-i18n="srv_2_desc">
-              Stunning 3D exterior elevations, interior renders, 3D floor cutaways, and cinematic architectural walkthroughs.
-            </p>
-            <ul class="service-deliverables">
-              <li>Modern Exterior Villa & Commercial Elevation</li>
-              <li>Photorealistic Day & Twilight Renderings</li>
-              <li>3D Cut-Section Isometric Floor Plans</li>
-              <li>HD Virtual Walkthrough Animation Videos</li>
-            </ul>
-          </div>
-          <div class="service-card-action">
-            <a href="#contact" class="btn btn-outline btn-sm" style="width: 100%;">Enquire For 3D Design</a>
-          </div>
-        </div>
-
-        <!-- Service 3: RCC Structural Design -->
-        <div class="service-card cad-corner-box">
-          <div>
-            <div class="service-card-top">
-              <div class="service-icon-box blue">🏢</div>
-              <span class="service-code">SVC-03</span>
-            </div>
-            <h3 data-i18n="srv_3_title">RCC Structural Design & Analysis</h3>
-            <p class="service-summary" data-i18n="srv_3_desc">
-              Complete structural analysis, foundation footing, column schedules, beam cross-sections, and slab reinforcement drawings.
-            </p>
-            <ul class="service-deliverables">
-              <li>Computerized FEA Structural Load Modeling</li>
-              <li>Isolated, Combined & Raft Foundation Design</li>
-              <li>Column, Beam & Slab Reinforcement Schedules</li>
-              <li>IS 456 & IS 1893 Seismic Compliance Reports</li>
-            </ul>
-          </div>
-          <div class="service-card-action">
-            <a href="#contact" class="btn btn-outline btn-sm" style="width: 100%;">Enquire For RCC Design</a>
-          </div>
-        </div>
-
-        <!-- Service 4: Steel Structure Design -->
-        <div class="service-card cad-corner-box">
-          <div>
-            <div class="service-card-top">
-              <div class="service-icon-box blue">🏗️</div>
-              <span class="service-code">SVC-04</span>
-            </div>
-            <h3 data-i18n="srv_4_title">Steel Structure Design & PEB Sheds</h3>
-            <p class="service-summary" data-i18n="srv_4_desc">
-              Heavy industrial shed design, warehouse steel portals, connection details, fabrication and erection drawings.
-            </p>
-            <ul class="service-deliverables">
-              <li>Pre-Engineered Building (PEB) Portal Frames</li>
-              <li>Industrial Warehouse & Factory Truss Design</li>
-              <li>High-Strength Bolted & Welded Connection Details</li>
-              <li>Fabrication Shop & Field Erection Sets</li>
-            </ul>
-          </div>
-          <div class="service-card-action">
-            <a href="#contact" class="btn btn-outline btn-sm" style="width: 100%;">Enquire For Steel Design</a>
-          </div>
-        </div>
-
-        <!-- Service 5: Working & Construction Drawings -->
-        <div class="service-card cad-corner-box">
-          <div>
-            <div class="service-card-top">
-              <div class="service-icon-box">📋</div>
-              <span class="service-code">SVC-05</span>
-            </div>
-            <h3 data-i18n="srv_5_title">Working & Construction Drawings</h3>
-            <p class="service-summary" data-i18n="srv_5_desc">
-              Construction-ready GFC sets including electrical conduits, plumbing, sanitation, door-window schedules, and staircase details.
-            </p>
-            <ul class="service-deliverables">
-              <li>Good-For-Construction (GFC) Detailed Sets</li>
-              <li>Electrical Conduiting & Distribution Layouts</li>
-              <li>Plumbing, Drainage & Rainwater Harvesting</li>
-              <li>Door, Window & Staircase Joinery Schedules</li>
-            </ul>
-          </div>
-          <div class="service-card-action">
-            <a href="#contact" class="btn btn-outline btn-sm" style="width: 100%;">Enquire For Working Sets</a>
-          </div>
-        </div>
-
-        <!-- Service 6: Estimation & BOQ -->
-        <div class="service-card cad-corner-box">
-          <div>
-            <div class="service-card-top">
-              <div class="service-icon-box">📊</div>
-              <span class="service-code">SVC-06</span>
-            </div>
-            <h3 data-i18n="srv_6_title">Quantity Estimation & BOQ</h3>
-            <p class="service-summary" data-i18n="srv_6_desc">
-              Comprehensive material estimation, Bill of Quantities (BOQ), steel bar bending schedules, and preliminary construction budgeting.
-            </p>
-            <ul class="service-deliverables">
-              <li>Itemized Bill of Quantities (BOQ) Preparation</li>
-              <li>Steel Reinforcement Bar Bending Schedules (BBS)</li>
-              <li>Concrete, Masonry & Finishing Material Takeoffs</li>
-              <li>Preliminary Budget Cost Projection & Analysis</li>
-            </ul>
-          </div>
-          <div class="service-card-action">
-            <a href="#contact" class="btn btn-outline btn-sm" style="width: 100%;">Enquire For BOQ</a>
-          </div>
-        </div>
-
-        <!-- Service 7: Site & Project Consultation -->
-        <div class="service-card cad-corner-box">
-          <div>
-            <div class="service-card-top">
-              <div class="service-icon-box">👷</div>
-              <span class="service-code">SVC-07</span>
-            </div>
-            <h3 data-i18n="srv_7_title">Site & Project Consultation</h3>
-            <p class="service-summary" data-i18n="srv_7_desc">
-              On-site land measurement, contour analysis, structural reinforcement checking, and contractor coordination.
-            </p>
-            <ul class="service-deliverables">
-              <li>Pre-design Laser Site Measurements & Topography</li>
-              <li>Footing Excavation & Foundation Checking</li>
-              <li>Pre-concreting Rebar Inspection & Quality Signoff</li>
-              <li>Contractor & Sub-vendor Engineering Guidance</li>
-            </ul>
-          </div>
-          <div class="service-card-action">
-            <a href="#contact" class="btn btn-outline btn-sm" style="width: 100%;">Enquire For Site Visits</a>
-          </div>
-        </div>
-
-        <!-- Service 8: Municipal Sanction Support -->
-        <div class="service-card cad-corner-box">
-          <div>
-            <div class="service-card-top">
-              <div class="service-icon-box">🏛️</div>
-              <span class="service-code">SVC-08</span>
-            </div>
-            <h3 data-i18n="srv_8_title">Municipal Approval Support</h3>
-            <p class="service-summary" data-i18n="srv_8_desc">
-              Municipal submission drawings, FAR/FSI calculations, and documentation support conforming to local development bylaws.
-            </p>
-            <ul class="service-deliverables">
-              <li>Municipal Authority Formatted Blueprints</li>
-              <li>Floor Area Ratio (FAR) & Built-up Calculations</li>
-              <li>Open Space & Fire Setback Line Verification</li>
-              <li>Technical Documentation for Sanctioning</li>
-            </ul>
-          </div>
-          <div class="service-card-action">
-            <a href="#contact" class="btn btn-outline btn-sm" style="width: 100%;">Enquire For Sanctions</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       5. INTERACTIVE 2D ↔ 3D ↔ RCC ↔ BUILT SHOWCASE
-       ========================================================================= -->
-  <section class="section" id="showcase">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag blue-tag" data-i18n="showcase_tag">INTERACTIVE DESIGN LIFECYCLE</div>
-        <h2 class="section-title text-gradient" data-i18n="showcase_title">Compare: Blueprint ↔ 3D ↔ RCC Frame ↔ Built Project</h2>
-        <p class="section-subtitle" data-i18n="showcase_subtitle">
-          Click the phases below to see how our engineering turns an initial 2D floor plan into a magnificent built reality.
-        </p>
-      </div>
-
-      <!-- Interactive Showcase Card -->
-      <div class="showcase-interactive-card">
-        <!-- Tab Bar -->
-        <div class="showcase-tab-bar">
-          <button class="showcase-tab active" data-phase="phase-2d">
-            <span class="showcase-tab-num">01</span>
-            <span data-i18n="tab_2d">1. 2D CAD Blueprint</span>
-          </button>
-          <button class="showcase-tab" data-phase="phase-3d">
-            <span class="showcase-tab-num">02</span>
-            <span data-i18n="tab_3d">2. 3D Architectural Render</span>
-          </button>
-          <button class="showcase-tab" data-phase="phase-rcc">
-            <span class="showcase-tab-num">03</span>
-            <span data-i18n="tab_rcc">3. RCC Structural Frame</span>
-          </button>
-          <button class="showcase-tab" data-phase="phase-built">
-            <span class="showcase-tab-num">04</span>
-            <span data-i18n="tab_built">4. Completed Construction</span>
-          </button>
-        </div>
-
-        <!-- Display Area -->
-        <div class="showcase-display-area">
-          <!-- Visual Media Frame -->
-          <div class="showcase-visual-frame">
-            <img src="assets/images/cad_floor_plan.jpg" alt="2D CAD Blueprint" class="active" id="showcaseMainImg">
-          </div>
-
-          <!-- Specification & Details Panel -->
-          <div class="showcase-details-panel">
-            <div class="showcase-stage-tag" id="showcaseStageTag">STAGE 01 • BLUEPRINT</div>
-            <h3 class="showcase-stage-title" id="showcaseStageTitle">2D Architectural Floor Plan & Space Design</h3>
-            <p class="showcase-stage-desc" id="showcaseStageDesc">
-              Every successful structure begins with meticulous 2D architectural drafting. We calibrate room sizes, circulation flow, door/window openings, and Vastu compliance down to the millimeter.
+            <p data-i18n="about_p2">
+              Whether you are developing a luxury bungalow, multi-story apartment, commercial showroom, or an industrial PEB warehouse, our team ensures every millimeter is optimized for aesthetic elegance, safety compliance, and cost efficiency.
             </p>
 
-            <!-- Dynamic Specs List -->
-            <div class="showcase-specs-list" id="showcaseSpecsContainer">
-              <div class="showcase-spec-item">
-                <span class="spec-key">Drafting Scale</span>
-                <span class="spec-val">1:100 Metric Precision</span>
+            <!-- 4 Pillars Grid -->
+            <div class="about-pillars-grid">
+              <div class="about-pillar-item">
+                <h4>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  <span data-i18n="feat_1_title">Practical Planning</span>
+                </h4>
+                <p data-i18n="feat_1_desc">100% construction-friendly 2D layouts maximizing natural airflow, light, and Vaastu harmony.</p>
               </div>
-              <div class="showcase-spec-item">
-                <span class="spec-key">Deliverable</span>
-                <span class="spec-val">Full Dimensioned CAD Blueprint</span>
+
+              <div class="about-pillar-item">
+                <h4>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  <span data-i18n="feat_2_title">Accurate Structural Design</span>
+                </h4>
+                <p data-i18n="feat_2_desc">Advanced seismic & wind analysis using IS 456, IS 800, and IS 1893 design codes.</p>
               </div>
-              <div class="showcase-spec-item">
-                <span class="spec-key">Compliance</span>
-                <span class="spec-val">Local Municipal Bylaws & FAR</span>
+
+              <div class="about-pillar-item">
+                <h4>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  <span data-i18n="feat_3_title">Photorealistic 3D</span>
+                </h4>
+                <p data-i18n="feat_3_desc">High-definition exterior elevations and walkthroughs so you see the final building before construction begins.</p>
               </div>
-              <div class="showcase-spec-item">
-                <span class="spec-key">Turnaround</span>
-                <span class="spec-val">4 - 6 Business Days</span>
+
+              <div class="about-pillar-item">
+                <h4>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  <span data-i18n="feat_4_title">End-to-End Support</span>
+                </h4>
+                <p data-i18n="feat_4_desc">Complete working drawings, BOQ estimation, and direct site consultation until project handover.</p>
               </div>
             </div>
 
             <div>
-              <a href="#contact" class="btn btn-primary btn-sm">
-                Request This Design Phase
+              <a href="#contact" class="btn btn-outline-dark">
+                Discuss Your Project With Us
               </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- =========================================================================
-       6. STRUCTURAL DESIGN DEEP DIVE SECTION
-       ========================================================================= -->
-  <section class="section structural-section" id="structural">
-    <div class="container">
-      <div class="structural-grid">
-        <!-- Content Left -->
-        <div class="structural-content">
-          <div class="section-tag blue-tag" data-i18n="struct_tag">ENGINEERING EXCELLENCE</div>
-          <h2 class="section-title text-blue-gradient" data-i18n="struct_title">
-            Strong Structures. Accurate Engineering.
-          </h2>
-          <p data-i18n="struct_desc">
-            Every column, beam, and foundation we design undergoes rigorous computer-aided finite element analysis to withstand seismic shocks, wind forces, and dead/live loads while optimizing steel consumption.
+    <!-- =========================================================================
+         4. DESIGN PHILOSOPHY SECTION (DARK #141414)
+         ========================================================================= -->
+    <section class="site-section section-philosophy">
+      <div class="container">
+        <div class="philosophy-grid">
+          <div class="philosophy-text-col">
+            <div class="philosophy-quote-mark">“</div>
+            <h2 class="philosophy-statement">
+              DESIGN WITH VISION. <br>
+              <span>ENGINEER WITH PRECISION.</span>
+            </h2>
+            <p class="philosophy-desc">
+              Great architecture is never just about aesthetics—it is the seamless synthesis of human emotion, spatial harmony, and uncompromising mathematical safety. At Vishal Jamdhade Buildcon, every line we draft is backed by finite element analysis and decades of structural mastery.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <span class="is-code-pill">IS 456:2000 RCC CODE</span>
+              <span class="is-code-pill">IS 1893 SEISMIC RESISTANCE</span>
+              <span class="is-code-pill">IS 800 STEEL FRAMES</span>
+            </div>
+          </div>
+
+          <div class="philosophy-visual-col">
+            <div class="philosophy-visual-card cad-corner-box">
+              <img src="assets/images/architectural_blueprint_fea.jpg" alt="Finite Element Analysis and CAD Structural Blueprint by Vishal Jamdhade Buildcon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. 3D ARCHITECTURAL EXPERIENCE (DARK #111111)
+         ========================================================================= -->
+    <section class="site-section section-3d-experience" id="experience3d">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag tag-steel">INTERACTIVE 3D WEBGL STUDIO</div>
+          <h2 class="section-title section-title-light">See The Design Before It Is Built.</h2>
+          <p class="section-subtitle section-subtitle-light">
+            Rotate, zoom, and inspect our interactive 3D architectural model across 4 engineering perspectives. Click the glowing pins for live structural telemetry.
           </p>
-
-          <div class="engineering-codes-list">
-            <span class="code-pill">IS 456:2000 (Plain & Reinforced Concrete)</span>
-            <span class="code-pill">IS 1893:2016 (Earthquake Resistance)</span>
-            <span class="code-pill">IS 875 Part 1-5 (Design Loads)</span>
-            <span class="code-pill">IS 800:2007 (Steel Structures)</span>
-            <span class="code-pill">IS 13920:2016 (Ductile Detailing)</span>
-          </div>
-
-          <div class="structural-accordion">
-            <div class="structural-box">
-              <h4>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#38BDF8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span data-i18n="struct_box1_title">RCC Framework (IS 456:2000)</span>
-              </h4>
-              <p data-i18n="struct_box1_desc">
-                Optimal concrete mix design, column rebar cages, ductile detailing for earthquake resistance (IS 13920).
-              </p>
-            </div>
-            <div class="structural-box">
-              <h4>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#38BDF8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span data-i18n="struct_box2_title">Steel Structural Design (IS 800:2007)</span>
-              </h4>
-              <p data-i18n="struct_box2_desc">
-                PEB portal frames, bolted moment connections, gantry girders, and wind load analysis for factories & warehouses.
-              </p>
-            </div>
-            <div class="structural-box">
-              <h4>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#38BDF8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span data-i18n="struct_box3_title">Foundation & Soil Engineering</span>
-              </h4>
-              <p data-i18n="struct_box3_desc">
-                Isolated, combined, raft, and pile foundations custom engineered according to your site's soil bearing capacity.
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <a href="#contact" class="btn btn-secondary" data-i18n="struct_cta">
-              Discuss Your Structural Requirements
-            </a>
-          </div>
         </div>
 
-        <!-- 3D Structural Visual Right -->
-        <div class="structural-visual">
-          <div class="cad-card" style="padding: 1rem; border-color: var(--border-blue);">
-            <img src="assets/images/rcc_structural_model.jpg" alt="3D Structural Engineering Analysis Model - Columns Beams Rebar" style="border-radius: var(--radius-md);">
+        <!-- 3D Three.js Viewport Wrapper -->
+        <div class="three-viewport-wrapper cad-corner-box" id="threeArchitecturalViewer">
+          <!-- Top HUD Controls -->
+          <div class="three-hud-top">
+            <div class="three-telemetry">
+              <span class="pulse-indicator"></span>
+              <span id="threeHudStandard">PHOTOREALISTIC TWILIGHT ELEVATION</span>
+            </div>
+
+            <!-- Mode Switcher Pill -->
+            <div class="three-mode-switcher">
+              <button class="three-mode-btn" data-mode="blueprint">Blueprint</button>
+              <button class="three-mode-btn" data-mode="clay">3D Model</button>
+              <button class="three-mode-btn active" data-mode="realistic">Realistic View</button>
+              <button class="three-mode-btn" data-mode="structural">Structural Frame</button>
+            </div>
+          </div>
+
+          <!-- WebGL Canvas Container -->
+          <div class="three-canvas-container" style="width: 100%; height: 100%;"></div>
+
+          <!-- 2D HTML Hotspots Layer Projected into 3D Space -->
+          <div class="three-hotspot-layer" style="position: absolute; inset: 0; pointer-events: none;"></div>
+
+          <!-- Bottom HUD Controls -->
+          <div class="three-hud-bottom">
+            <div class="three-instructions">
+              <span>🖱️ Drag to rotate • Scroll to zoom • Click pins for details</span>
+            </div>
+            <div class="three-viewport-tools">
+              <button class="three-tool-btn" id="threeToggleRotate" title="Toggle Auto-Rotation">🔄</button>
+              <button class="three-tool-btn" id="threeResetView" title="Reset Viewpoint">🎯</button>
+            </div>
+          </div>
+
+          <!-- Hotspot Detail Drawer Overlay -->
+          <div class="hotspot-detail-card" id="hotspotDetailCard">
+            <button class="hotspot-card-close" id="hotspotCardClose">✕</button>
+            <span class="section-tag tag-steel" id="hotspotCardCode" style="margin-bottom: 0.5rem; display: block;"></span>
+            <h4 id="hotspotCardTitle" style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 0.5rem;"></h4>
+            <p id="hotspotCardDesc" style="font-size: 0.85rem; color: #CCCCCC; line-height: 1.6;"></p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- =========================================================================
-       7. COMMERCIAL & INDUSTRIAL PROJECTS SECTION
-       ========================================================================= -->
-  <section class="section" id="commercial">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">COMMERCIAL & INDUSTRIAL PORTFOLIO</div>
-        <h2 class="section-title text-gradient">Shops, Showrooms, Offices & PEB Warehouses</h2>
-        <p class="section-subtitle">
-          Engineered for commercial footfall, corporate branding, heavy logistics, and structural longevity.
-        </p>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Commercial Complex Card -->
-        <div class="project-card" data-category="commercial">
-          <div class="project-image-box">
-            <img src="assets/images/commercial_complex.jpg" alt="Commercial Arcade Project">
-            <span class="project-category-badge">Commercial Arcade</span>
-          </div>
-          <div class="project-content">
-            <div class="project-location">📍 Aurangabad / Sambhajinagar</div>
-            <h3 class="project-title">City Crossing Commercial Arcade</h3>
-            <div class="project-specs-grid">
-              <div class="project-spec-item">
-                Built-Up: <strong>28,500 Sq.Ft</strong>
-              </div>
-              <div class="project-spec-item">
-                Floors: <strong>B + G + 4 Floors</strong>
-              </div>
-              <div class="project-spec-item">
-                Structure: <strong>Post-Tensioned RCC</strong>
-              </div>
-              <div class="project-spec-item">
-                Scope: <strong>Full Architecture & RCC</strong>
-              </div>
-            </div>
-            <div class="project-card-footer">
-              <span style="font-size: 0.82rem; color: var(--text-muted);">Status: Completed</span>
-              <a href="#" class="btn-view-case" data-case-id="2">
-                Explore Case Study →
-              </a>
-            </div>
-          </div>
+    <!-- =========================================================================
+         6. SERVICES SECTION (PURE WHITE #FFFFFF)
+         ========================================================================= -->
+    <section class="site-section section-services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag" data-i18n="services_tag">03 — ARCHITECTURAL SERVICES</div>
+          <h2 class="section-title section-title-dark" data-i18n="services_title">Engineering Every Detail.</h2>
+          <p class="section-subtitle section-subtitle-dark" data-i18n="services_subtitle">
+            From the first line on paper to the final construction drawing. Complete architectural planning and structural consultancy under one roof.
+          </p>
         </div>
 
-        <!-- Industrial Warehouse Card -->
-        <div class="project-card" data-category="industrial">
-          <div class="project-image-box">
-            <img src="assets/images/industrial_warehouse.jpg" alt="LogiTech PEB Mega Warehouse">
-            <span class="project-category-badge">Industrial PEB</span>
-          </div>
-          <div class="project-content">
-            <div class="project-location">📍 Chakan Industrial Zone, Pune</div>
-            <h3 class="project-title">LogiTech PEB Mega Warehouse</h3>
-            <div class="project-specs-grid">
-              <div class="project-spec-item">
-                Built-Up: <strong>32,000 Sq.Ft</strong>
-              </div>
-              <div class="project-spec-item">
-                Clear Height: <strong>11 Meters Single Span</strong>
-              </div>
-              <div class="project-spec-item">
-                Structure: <strong>PEB Rigid Steel Frames</strong>
-              </div>
-              <div class="project-spec-item">
-                Scope: <strong>Steel Design + Foundation</strong>
-              </div>
-            </div>
-            <div class="project-card-footer">
-              <span style="font-size: 0.82rem; color: var(--text-muted);">Status: Commissioned</span>
-              <a href="#" class="btn-view-case" data-case-id="3">
-                Explore Case Study →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       8. PROJECT PORTFOLIO & CASE STUDIES
-       ========================================================================= -->
-  <section class="section" id="projects" style="background: rgba(11, 19, 37, 0.3);">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag" data-i18n="nav_projects">PROJECT PORTFOLIO</div>
-        <h2 class="section-title text-gradient">Featured Architectural & Engineering Works</h2>
-        <p class="section-subtitle">
-          Explore our completed and ongoing projects across bungalows, flats, commercial showrooms, and heavy industrial facilities.
-        </p>
-      </div>
-
-      <!-- Filter Chips -->
-      <div class="portfolio-filter-bar">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="residential">Residential Bungalows & Flats</button>
-        <button class="filter-btn" data-filter="commercial">Commercial Complexes & Offices</button>
-        <button class="filter-btn" data-filter="industrial">Industrial Sheds & PEB</button>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="projects-grid">
-        <!-- Project 1: Luxury Villa -->
-        <div class="project-card" data-category="residential">
-          <div class="project-image-box">
-            <img src="assets/images/elevation_3d.jpg" alt="Skyline Grandeur Luxury Villa">
-            <span class="project-category-badge">Residential Bungalow</span>
-          </div>
-          <div class="project-content">
-            <div class="project-location">📍 Baner, Pune</div>
-            <h3 class="project-title">Skyline Grandeur Luxury Villa</h3>
-            <div class="project-specs-grid">
-              <div class="project-spec-item">Plot: <strong>4,500 Sq.Ft</strong></div>
-              <div class="project-spec-item">Built-Up: <strong>6,200 Sq.Ft</strong></div>
-              <div class="project-spec-item">Floors: <strong>G + 2 Floors</strong></div>
-              <div class="project-spec-item">Structural: <strong>Seismic Zone III</strong></div>
-            </div>
-            <div class="project-card-footer">
-              <span style="font-size: 0.82rem; color: var(--text-muted);">2D + 3D + RCC</span>
-              <a href="#" class="btn-view-case" data-case-id="1">
-                View 10-Step Study →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2: Anand Nilayam -->
-        <div class="project-card" data-category="residential">
-          <div class="project-image-box">
-            <img src="assets/images/completed_bungalow.jpg" alt="Anand Nilayam Luxury Bungalow">
-            <span class="project-category-badge">Residential Bungalow</span>
-          </div>
-          <div class="project-content">
-            <div class="project-location">📍 Nashik, Maharashtra</div>
-            <h3 class="project-title">Anand Nilayam Eco Bungalow</h3>
-            <div class="project-specs-grid">
-              <div class="project-spec-item">Plot: <strong>3,800 Sq.Ft</strong></div>
-              <div class="project-spec-item">Built-Up: <strong>4,400 Sq.Ft</strong></div>
-              <div class="project-spec-item">Floors: <strong>G + 1 Floor</strong></div>
-              <div class="project-spec-item">Structural: <strong>Slender RCC Frame</strong></div>
-            </div>
-            <div class="project-card-footer">
-              <span style="font-size: 0.82rem; color: var(--text-muted);">Finished & Handover</span>
-              <a href="#" class="btn-view-case" data-case-id="4">
-                View 10-Step Study →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3: Commercial -->
-        <div class="project-card" data-category="commercial">
-          <div class="project-image-box">
-            <img src="assets/images/commercial_complex.jpg" alt="City Crossing Commercial Arcade">
-            <span class="project-category-badge">Commercial Arcade</span>
-          </div>
-          <div class="project-content">
-            <div class="project-location">📍 Chhatrapati Sambhajinagar</div>
-            <h3 class="project-title">City Crossing Arcade</h3>
-            <div class="project-specs-grid">
-              <div class="project-spec-item">Plot: <strong>12,000 Sq.Ft</strong></div>
-              <div class="project-spec-item">Built-Up: <strong>28,500 Sq.Ft</strong></div>
-              <div class="project-spec-item">Floors: <strong>B + G + 4 Floors</strong></div>
-              <div class="project-spec-item">Structural: <strong>PT Beams 9m Spans</strong></div>
-            </div>
-            <div class="project-card-footer">
-              <span style="font-size: 0.82rem; color: var(--text-muted);">Commercial Retail</span>
-              <a href="#" class="btn-view-case" data-case-id="2">
-                View 10-Step Study →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4: Industrial PEB -->
-        <div class="project-card" data-category="industrial">
-          <div class="project-image-box">
-            <img src="assets/images/industrial_warehouse.jpg" alt="LogiTech PEB Mega Warehouse">
-            <span class="project-category-badge">Industrial PEB</span>
-          </div>
-          <div class="project-content">
-            <div class="project-location">📍 Chakan Industrial Zone</div>
-            <h3 class="project-title">LogiTech Logistics Center</h3>
-            <div class="project-specs-grid">
-              <div class="project-spec-item">Plot: <strong>45,000 Sq.Ft</strong></div>
-              <div class="project-spec-item">Built-Up: <strong>32,000 Sq.Ft</strong></div>
-              <div class="project-spec-item">Clear Height: <strong>11m Clear Span</strong></div>
-              <div class="project-spec-item">Structural: <strong>IS 800:2007 PEB</strong></div>
-            </div>
-            <div class="project-card-footer">
-              <span style="font-size: 0.82rem; color: var(--text-muted);">High Tensile Steel</span>
-              <a href="#" class="btn-view-case" data-case-id="3">
-                View 10-Step Study →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       9. INTERACTIVE PROJECT ESTIMATOR CALCULATOR TOOL
-       ========================================================================= -->
-  <section class="section" id="estimator">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag" data-i18n="est_tag">INSTANT PROJECT CALCULATOR</div>
-        <h2 class="section-title text-gradient" data-i18n="est_title">Estimate Your Architectural & Structural Package</h2>
-        <p class="section-subtitle" data-i18n="est_subtitle">
-          Select your project specifications to calculate estimated scope, deliverables, and turnaround time.
-        </p>
-      </div>
-
-      <div class="estimator-card">
-        <div class="estimator-layout">
-          <!-- Inputs Left -->
-          <div class="estimator-inputs">
-            <!-- 1. Type -->
-            <div class="calc-group">
-              <label class="calc-label" data-i18n="est_type_label">1. Select Project Type</label>
-              <div class="type-buttons-row">
-                <button type="button" class="calc-type-btn active" data-type="bungalow" data-i18n="est_type_bungalow">Bungalow / Villa</button>
-                <button type="button" class="calc-type-btn" data-type="rowhouse" data-i18n="est_type_rowhouse">Row House / Flats</button>
-                <button type="button" class="calc-type-btn" data-type="commercial" data-i18n="est_type_commercial">Commercial / Office</button>
-              </div>
-            </div>
-
-            <!-- 2. Area Range Slider -->
-            <div class="calc-group">
-              <div class="calc-label">
-                <span data-i18n="est_area_label">2. Built-Up Area (Sq.Ft)</span>
-                <span class="value-pill" id="calcAreaValue">2,500 Sq.Ft</span>
-              </div>
-              <input type="range" class="calc-range-slider" id="calcAreaSlider" min="800" max="15000" step="100" value="2500">
-              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
-                <span>800 Sq.Ft (Compact)</span>
-                <span>5,000 Sq.Ft</span>
-                <span>15,000 Sq.Ft (Large)</span>
-              </div>
-            </div>
-
-            <!-- 3. Package Options -->
-            <div class="calc-group">
-              <label class="calc-label" data-i18n="est_pkg_label">3. Required Engineering Package</label>
-              <div class="service-options-group">
-                <label class="service-option-item">
-                  <input type="radio" name="calcPackage" value="plan2d" class="service-option-radio">
-                  <div>
-                    <strong style="display: block; font-size: 0.92rem;" data-i18n="est_pkg_1">2D Planning + Architectural Drawings</strong>
-                    <span style="font-size: 0.78rem; color: var(--text-muted);">Floor plans, room layouts, dimensioned working blueprints</span>
-                  </div>
-                </label>
-
-                <label class="service-option-item">
-                  <input type="radio" name="calcPackage" value="plan3d" class="service-option-radio">
-                  <div>
-                    <strong style="display: block; font-size: 0.92rem;" data-i18n="est_pkg_2">2D Planning + 3D Realistic Elevations</strong>
-                    <span style="font-size: 0.78rem; color: var(--text-muted);">Floor plans + exterior facade renders and color schemes</span>
-                  </div>
-                </label>
-
-                <label class="service-option-item selected">
-                  <input type="radio" name="calcPackage" value="full" class="service-option-radio" checked>
-                  <div>
-                    <strong style="display: block; font-size: 0.92rem; color: var(--accent-gold-light);" data-i18n="est_pkg_3">Full Turnkey: 2D + 3D + RCC Structural + BOQ</strong>
-                    <span style="font-size: 0.78rem; color: var(--text-muted);">Complete architecture, computerized RCC structural analysis & BOQ</span>
-                  </div>
-                </label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Summary Card Right -->
-          <div class="estimator-summary-box">
-            <div class="summary-header">
-              <h4 data-i18n="est_box_title">Estimated Package Summary</h4>
-              <p>Transparent estimation tailored to Vishal Jamdhade Buildcon standards</p>
-            </div>
-
-            <div class="summary-metric">
-              <span style="color: var(--text-muted);">Estimated Design Budget:</span>
-              <span class="metric-highlight" id="estCostRange">₹40,500 - ₹49,500</span>
-            </div>
-
-            <div class="summary-metric">
-              <span style="color: var(--text-muted);" data-i18n="est_time_label">Estimated Design Timeline:</span>
-              <span style="font-family: var(--font-mono); color: var(--text-white); font-weight: 600;" id="estDaysRange">16 - 20 Business Days</span>
-            </div>
-
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card cad-corner-box">
             <div>
-              <div style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.6rem; color: var(--text-white);" data-i18n="est_deliverables_label">
-                Included Deliverables:
+              <div class="service-header">
+                <span class="service-code">SVC-01</span>
+                <span class="service-icon">📐</span>
               </div>
-              <ul class="included-deliverables-list" id="estDeliverablesList">
-                <!-- Dynamically populated by estimator.js -->
+              <h3 class="service-title">2D Architectural Planning</h3>
+              <p class="service-desc">
+                Precision space planning, dimensioned architectural floor plans, furniture layouts, and municipal sanction drawings.
+              </p>
+              <ul class="service-deliverables">
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Detailed Floor Plans & Room Dimensions</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Functional Space & Furniture Layouts</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Dimensioned Cross-Sections & Elevations</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Municipal Authority Submission Plans</li>
               </ul>
             </div>
+            <div class="service-card-action">
+              <a href="#contact" class="btn btn-outline-dark btn-sm" style="width: 100%;">Enquire For 2D Planning</a>
+            </div>
+          </div>
 
-            <button type="button" class="btn btn-primary" id="applyEstimateBtn" data-i18n="est_btn" style="width: 100%;">
-              Request Official Proposal For This Estimate
+          <!-- Service 2 -->
+          <div class="service-card cad-corner-box">
+            <div>
+              <div class="service-header">
+                <span class="service-code">SVC-02</span>
+                <span class="service-icon">🏛️</span>
+              </div>
+              <h3 class="service-title">3D Architectural Visualization</h3>
+              <p class="service-desc">
+                Stunning 3D exterior elevations, interior renders, 3D floor cutaways, and cinematic architectural walkthroughs.
+              </p>
+              <ul class="service-deliverables">
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Modern Exterior Villa & Commercial Facade</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Photorealistic Day & Twilight Renderings</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> 3D Cut-Section Isometric Floor Plans</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> HD Virtual Walkthrough Animation Videos</li>
+              </ul>
+            </div>
+            <div class="service-card-action">
+              <a href="#contact" class="btn btn-outline-dark btn-sm" style="width: 100%;">Enquire For 3D Design</a>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card cad-corner-box">
+            <div>
+              <div class="service-header">
+                <span class="service-code">SVC-03</span>
+                <span class="service-icon">🏢</span>
+              </div>
+              <h3 class="service-title">RCC Structural Design</h3>
+              <p class="service-desc">
+                Complete structural analysis, foundation footing, column schedules, beam cross-sections, and slab reinforcement drawings.
+              </p>
+              <ul class="service-deliverables">
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Computerized FEA Structural Load Modeling</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Isolated, Combined & Raft Foundation</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Column, Beam & Slab Rebar Schedules</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> IS 456 & IS 1893 Seismic Compliance</li>
+              </ul>
+            </div>
+            <div class="service-card-action">
+              <a href="#contact" class="btn btn-outline-dark btn-sm" style="width: 100%;">Enquire For RCC Design</a>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card cad-corner-box">
+            <div>
+              <div class="service-header">
+                <span class="service-code">SVC-04</span>
+                <span class="service-icon">🏗️</span>
+              </div>
+              <h3 class="service-title">Steel Structure & PEB</h3>
+              <p class="service-desc">
+                Heavy industrial shed design, warehouse steel portals, connection details, fabrication and erection drawings.
+              </p>
+              <ul class="service-deliverables">
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Pre-Engineered Building (PEB) Portals</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Industrial Warehouse & Factory Trusses</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> High-Strength Bolted & Welded Detailing</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Fabrication Shop & Field Erection Sets</li>
+              </ul>
+            </div>
+            <div class="service-card-action">
+              <a href="#contact" class="btn btn-outline-dark btn-sm" style="width: 100%;">Enquire For Steel Design</a>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card cad-corner-box">
+            <div>
+              <div class="service-header">
+                <span class="service-code">SVC-05</span>
+                <span class="service-icon">📋</span>
+              </div>
+              <h3 class="service-title">Working & Construction Drawings</h3>
+              <p class="service-desc">
+                Construction-ready GFC sets including electrical conduits, plumbing, sanitation, door-window schedules, and staircase details.
+              </p>
+              <ul class="service-deliverables">
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Good-For-Construction (GFC) Detailed Sets</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Electrical Conduiting & Distribution</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Plumbing, Drainage & Rainwater Harvesting</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Door, Window & Staircase Schedules</li>
+              </ul>
+            </div>
+            <div class="service-card-action">
+              <a href="#contact" class="btn btn-outline-dark btn-sm" style="width: 100%;">Enquire For Working Sets</a>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card cad-corner-box">
+            <div>
+              <div class="service-header">
+                <span class="service-code">SVC-06</span>
+                <span class="service-icon">📊</span>
+              </div>
+              <h3 class="service-title">Quantity Estimation & BOQ</h3>
+              <p class="service-desc">
+                Comprehensive material estimation, Bill of Quantities (BOQ), steel bar bending schedules, and preliminary construction budgeting.
+              </p>
+              <ul class="service-deliverables">
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Itemized Bill of Quantities (BOQ)</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Steel Reinforcement Bar Bending (BBS)</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Concrete, Masonry & Finishing Takeoffs</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Preliminary Budget Cost Projection</li>
+              </ul>
+            </div>
+            <div class="service-card-action">
+              <a href="#contact" class="btn btn-outline-dark btn-sm" style="width: 100%;">Enquire For BOQ</a>
+            </div>
+          </div>
+
+          <!-- Service 7 -->
+          <div class="service-card cad-corner-box">
+            <div>
+              <div class="service-header">
+                <span class="service-code">SVC-07</span>
+                <span class="service-icon">👷</span>
+              </div>
+              <h3 class="service-title">Site & Project Consultation</h3>
+              <p class="service-desc">
+                On-site land measurement, contour analysis, structural reinforcement checking, and contractor coordination.
+              </p>
+              <ul class="service-deliverables">
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Pre-design Laser Site Measurements</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Footing Excavation & Foundation Check</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Pre-concreting Rebar Inspection</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Contractor & Sub-vendor Guidance</li>
+              </ul>
+            </div>
+            <div class="service-card-action">
+              <a href="#contact" class="btn btn-outline-dark btn-sm" style="width: 100%;">Enquire For Site Visits</a>
+            </div>
+          </div>
+
+          <!-- Service 8 -->
+          <div class="service-card cad-corner-box">
+            <div>
+              <div class="service-header">
+                <span class="service-code">SVC-08</span>
+                <span class="service-icon">🏛️</span>
+              </div>
+              <h3 class="service-title">Municipal Approval Support</h3>
+              <p class="service-desc">
+                Municipal submission drawings, FAR/FSI calculations, and documentation support conforming to local development bylaws.
+              </p>
+              <ul class="service-deliverables">
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Municipal Authority Formatted Blueprints</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Floor Area Ratio (FAR) & Built-up Math</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Open Space & Fire Setback Verification</li>
+                <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> Technical Documentation for Sanction</li>
+              </ul>
+            </div>
+            <div class="service-card-action">
+              <a href="#contact" class="btn btn-outline-dark btn-sm" style="width: 100%;">Enquire For Sanctions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. BLUEPRINT TO BUILT (DARK #14171D)
+         ========================================================================= -->
+    <section class="site-section section-blueprint-built" id="showcase">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag tag-steel">DESIGN LIFECYCLE</div>
+          <h2 class="section-title section-title-light">From Blueprint To Built.</h2>
+          <p class="section-subtitle section-subtitle-light">
+            Click the stages below to witness how our integrated engineering elevates a 2D floor plan into an engineered reality.
+          </p>
+        </div>
+
+        <div class="showcase-card">
+          <!-- 4 Phase Tabs -->
+          <div class="showcase-tabs-bar">
+            <button class="showcase-tab-btn active" data-phase="phase-2d">
+              <span class="showcase-tab-num">01</span>
+              <span class="showcase-tab-text">2D CAD Blueprint</span>
+            </button>
+            <button class="showcase-tab-btn" data-phase="phase-3d">
+              <span class="showcase-tab-num">02</span>
+              <span class="showcase-tab-text">3D Architecture</span>
+            </button>
+            <button class="showcase-tab-btn" data-phase="phase-rcc">
+              <span class="showcase-tab-num">03</span>
+              <span class="showcase-tab-text">RCC Structural Frame</span>
+            </button>
+            <button class="showcase-tab-btn" data-phase="phase-built">
+              <span class="showcase-tab-num">04</span>
+              <span class="showcase-tab-text">Completed Construction</span>
             </button>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- =========================================================================
-       10. OUR 6-STEP PROCESS
-       ========================================================================= -->
-  <section class="section" id="process" style="background: rgba(7, 11, 20, 0.6);">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag" data-i18n="process_tag">OUR METHODOLOGY</div>
-        <h2 class="section-title text-gradient" data-i18n="process_title">A Seamless 6-Step Design Journey</h2>
-        <p class="section-subtitle">
-          How we guide you from a raw plot of land to a safe, approved, and magnificent structure.
-        </p>
-      </div>
-
-      <div class="process-timeline-grid">
-        <!-- Step 1 -->
-        <div class="process-step-card">
-          <div class="process-step-num">01</div>
-          <h3 data-i18n="step_1_title">01 – Consultation</h3>
-          <p data-i18n="step_1_desc">
-            In-depth discussion to understand your budget, lifestyle or commercial functional requirements.
-          </p>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="process-step-card">
-          <div class="process-step-num">02</div>
-          <h3 data-i18n="step_2_title">02 – Site Analysis</h3>
-          <p data-i18n="step_2_desc">
-            Accurate physical measurements, soil condition evaluation, orientation, and local municipal bylaws.
-          </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="process-step-card">
-          <div class="process-step-num">03</div>
-          <h3 data-i18n="step_3_title">03 – 2D Planning</h3>
-          <p data-i18n="step_3_desc">
-            Drafting intelligent room layouts, optimal space utilization, and dimensioned architectural plans.
-          </p>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="process-step-card">
-          <div class="process-step-num">04</div>
-          <h3 data-i18n="step_4_title">04 – 3D Visualization</h3>
-          <p data-i18n="step_4_desc">
-            Creating hyper-realistic exterior elevations, material textures, and lighting options.
-          </p>
-        </div>
-
-        <!-- Step 5 -->
-        <div class="process-step-card">
-          <div class="process-step-num">05</div>
-          <h3 data-i18n="step_5_title">05 – Structural Design</h3>
-          <p data-i18n="step_5_desc">
-            Precision RCC / Steel structural analysis, column-beam schedules, and safe foundation detailing.
-          </p>
-        </div>
-
-        <!-- Step 6 -->
-        <div class="process-step-card">
-          <div class="process-step-num">06</div>
-          <h3 data-i18n="step_6_title">06 – Construction Support</h3>
-          <p data-i18n="step_6_desc">
-            Supplying complete Good-For-Construction drawings, BOQ estimation, and periodic site inspections.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       11. WHY CHOOSE US
-       ========================================================================= -->
-  <section class="section" id="why-us">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag" data-i18n="why_tag">THE BUILDCON ADVANTAGE</div>
-        <h2 class="section-title text-gradient" data-i18n="why_title">Why Clients Trust Vishal Jamdhade Buildcon</h2>
-        <p class="section-subtitle">
-          Six foundational values that ensure structural reliability, aesthetic beauty, and investment confidence.
-        </p>
-      </div>
-
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon">📐</div>
-          <h4 data-i18n="why_1_title">Integrated Design & Engineering</h4>
-          <p data-i18n="why_1_desc">Both architectural beauty and structural stability are crafted under one roof, preventing coordination clashes.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-icon">⚖️</div>
-          <h4 data-i18n="why_2_title">Cost & Steel Optimization</h4>
-          <p data-i18n="why_2_desc">Accurate structural calculations eliminate over-designing and save 10% to 15% on rebar and concrete costs.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-icon">📄</div>
-          <h4 data-i18n="why_3_title">Construction-Friendly Drawings</h4>
-          <p data-i18n="why_3_desc">Clear, detailed GFC drawings that site contractors and masons can execute with zero ambiguity.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-icon">⏱️</div>
-          <h4 data-i18n="why_4_title">Fast Turnaround Time</h4>
-          <p data-i18n="why_4_desc">Dedicated project milestones ensure your plans and structural reports are delivered on schedule.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-icon">🏛️</div>
-          <h4 data-i18n="why_5_title">Municipal Bylaw Compliance</h4>
-          <p data-i18n="why_5_desc">Expertise in local municipal submission standards, setback requirements, and FSI optimization.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-icon">🤝</div>
-          <h4 data-i18n="why_6_title">Transparent & Client-Centric</h4>
-          <p data-i18n="why_6_desc">Direct communication with our principal designers and engineers throughout the project lifecycle.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       12. TESTIMONIALS SECTION
-       ========================================================================= -->
-  <section class="section" id="testimonials" style="background: rgba(11, 19, 37, 0.4);">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">CLIENT TESTIMONIALS</div>
-        <h2 class="section-title text-gradient">What Our Clients Say About Us</h2>
-        <p class="section-subtitle">Real feedback from bungalow owners, commercial developers, and industrial plant owners.</p>
-      </div>
-
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="test-stars">★★★★★</div>
-          <p class="test-quote">
-            "Vishal Jamdhade Buildcon designed our 5-BHK luxury bungalow in Baner, Pune. The 3D elevation was so realistic that the final building looks identical to the render! Their RCC structural drawings also saved us over ₹3.5 Lakhs in steel rebar optimization."
-          </p>
-          <div class="test-author">
-            <div class="author-avatar">RK</div>
-            <div class="author-info">
-              <h5>Dr. R. Kulkarni</h5>
-              <span>Bungalow Owner • Baner, Pune</span>
+          <!-- Showcase Display Grid -->
+          <div class="showcase-content-grid">
+            <div class="showcase-image-viewport">
+              <img src="assets/images/cad_floor_plan.jpg" alt="2D CAD Blueprint" id="showcaseMainImg">
             </div>
-          </div>
-        </div>
 
-        <div class="testimonial-card">
-          <div class="test-stars">★★★★★</div>
-          <p class="test-quote">
-            "For our 4-story commercial arcade, we required clear column-free retail showroom spans. The structural engineering team at Vishal Jamdhade Buildcon delivered outstanding post-tensioned beam calculations. Fast, professional, and compliant with all bylaws!"
-          </p>
-          <div class="test-author">
-            <div class="author-avatar">MS</div>
-            <div class="author-info">
-              <h5>Mr. Manoj Shinde</h5>
-              <span>Managing Partner • City Crossing Arcade</span>
-            </div>
-          </div>
-        </div>
+            <div class="showcase-details-pane">
+              <div class="showcase-stage-tag" id="showcaseStageTag">STAGE 01 • BLUEPRINT</div>
+              <h3 class="showcase-stage-title" id="showcaseStageTitle">2D Architectural Floor Plan & Space Design</h3>
+              <p class="showcase-stage-desc" id="showcaseStageDesc">
+                Every successful structure begins with meticulous 2D architectural drafting. We calibrate room sizes, circulation flow, door/window openings, and Vastu compliance down to the millimeter.
+              </p>
 
-        <div class="testimonial-card">
-          <div class="test-stars">★★★★★</div>
-          <p class="test-quote">
-            "Designing a 32,000 sq.ft industrial steel warehouse needs exact PEB wind and crane load calculations. Their team provided complete fabrication shop drawings and anchor bolt templates within 12 days. Highly recommended structural consultants!"
-          </p>
-          <div class="test-author">
-            <div class="author-avatar">VP</div>
-            <div class="author-info">
-              <h5>Vikram Patil</h5>
-              <span>Director • LogiTech Logistics Park</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       13. FAQ ACCORDION SECTION
-       ========================================================================= -->
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">FREQUENTLY ASKED QUESTIONS</div>
-        <h2 class="section-title text-gradient">Answers to Common Architectural & Structural Queries</h2>
-        <p class="section-subtitle">Everything you need to know about our design process, drawings, timelines, and fees.</p>
-      </div>
-
-      <div class="faq-container">
-        <!-- FAQ 1 -->
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Do you provide both 2D planning and 3D architectural elevations?</span>
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Yes, absolutely! We provide complete end-to-end architectural solutions starting from conceptual 2D floor plans, furniture layouts, dimensioned working drawings, to photorealistic 3D exterior elevations, 3D floor cutaways, and 360-degree virtual walkthroughs.
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Do you provide RCC structural design and earthquake-resistant drawings?</span>
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Yes. Structural safety is our primary engineering specialty. We provide complete RCC structural analysis and design conforming to IS 456:2000 and IS 1893:2016 (Earthquake Resistance), including isolated/raft foundations, column layouts, beam schedules, and slab reinforcement details.
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Do you design industrial steel structures and warehouse sheds?</span>
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Yes, we specialize in Pre-Engineered Buildings (PEB), industrial factories, warehouse sheds, and heavy steel structures conforming to IS 800:2007. We deliver anchor bolt layouts, moment connection detailing, purlin schedules, and fabrication drawings.
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>What are Good-For-Construction (GFC) working drawings?</span>
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              GFC working drawings are the comprehensive blueprints given directly to your site contractor, engineer, and mason. They include exact dimensional wall offsets, electrical conduit layouts, plumbing/drainage routes, door-window schedules, and staircase structural details so the building is constructed with zero errors.
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Do you provide material quantity estimation and BOQ?</span>
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Yes, we prepare detailed Bill of Quantities (BOQ) with accurate material takeoffs for cement, sand, aggregate, structural steel reinforcement (Bar Bending Schedules), brickwork, plaster, flooring, and paint. This protects you from contractor over-billing.
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 6 -->
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Can you modify or verify an existing architectural floor plan?</span>
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Yes. If you already have a preliminary layout from a local builder or draftsman, our architects and structural engineers can review it for space optimization, Vastu alignment, structural load feasibility, and municipal bylaw compliance.
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 7 -->
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>Do you visit the construction site for inspection?</span>
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Yes, we provide site consultation services including initial site laser measurement, foundation excavation checking, and pre-concreting column/beam/slab reinforcement checking to verify that the contractor has placed rebar exactly as per our structural drawings.
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 8 -->
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>How do I get an official quotation for my project?</span>
-            <span class="faq-icon">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              You can simply use our interactive Estimator Tool on this page or fill out the enquiry form with your plot dimensions and required services. You can also call us directly at <strong>99 23 43 83 73</strong> or send your plot sketch on WhatsApp for an immediate consultation.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       14. CONTACT / LEAD GENERATION SECTION
-       ========================================================================= -->
-  <section class="section" id="contact" style="background: linear-gradient(180deg, var(--bg-darkest) 0%, #0C152A 100%);">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag" data-i18n="contact_tag">GET IN TOUCH</div>
-        <h2 class="section-title text-gradient" data-i18n="contact_title">Have a Project in Mind?</h2>
-        <p class="section-subtitle" data-i18n="contact_subtitle">
-          Share your requirements with us and let's turn your vision into a practical, structurally safe, and aesthetically brilliant reality.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-        <!-- Lead Generation Form Left -->
-        <div class="contact-form-card">
-          <h3>Submit Project Enquiry</h3>
-          <p class="form-desc">Fill in your requirements below for a complimentary preliminary consultation.</p>
-
-          <form id="projectContactForm">
-            <div class="form-grid">
-              <!-- Name -->
-              <div class="form-group">
-                <label class="form-label" for="formName" data-i18n="form_name">Full Name *</label>
-                <input type="text" id="formName" class="form-input" placeholder="e.g. Vishal Jamdhade" required>
+              <div class="showcase-specs-list" id="showcaseSpecsContainer">
+                <div class="showcase-spec-item">
+                  <span class="spec-key">Drafting Scale</span>
+                  <span class="spec-val">1:100 Metric Precision</span>
+                </div>
+                <div class="showcase-spec-item">
+                  <span class="spec-key">Deliverable</span>
+                  <span class="spec-val">Full Dimensioned CAD Blueprint</span>
+                </div>
+                <div class="showcase-spec-item">
+                  <span class="spec-key">Compliance</span>
+                  <span class="spec-val">Local Municipal Bylaws & FAR</span>
+                </div>
+                <div class="showcase-spec-item">
+                  <span class="spec-key">Turnaround</span>
+                  <span class="spec-val">4 - 6 Business Days</span>
+                </div>
               </div>
 
-              <!-- Phone -->
-              <div class="form-group">
-                <label class="form-label" for="formPhone" data-i18n="form_phone">Mobile Number *</label>
-                <input type="tel" id="formPhone" class="form-input" placeholder="e.g. 99 23 43 83 73" required>
+              <div>
+                <a href="#contact" class="btn btn-primary btn-sm">
+                  Request This Design Phase
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. SELECTED PROJECTS PORTFOLIO (DARK #111111)
+         ========================================================================= -->
+    <section class="site-section section-portfolio" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag" data-i18n="nav_projects">PROJECT PORTFOLIO</div>
+          <h2 class="section-title section-title-light">Selected Projects</h2>
+          <p class="section-subtitle section-subtitle-light">
+            Explore our completed and ongoing landmarks across bungalows, luxury villas, commercial arcades, and industrial PEB warehouses.
+          </p>
+        </div>
+
+        <!-- Filter Chips -->
+        <div class="portfolio-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="residential">Residential</button>
+          <button class="filter-btn" data-filter="commercial">Commercial</button>
+          <button class="filter-btn" data-filter="industrial">Industrial PEB</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- Project 1: Luxury Villa -->
+          <div class="project-card" data-category="residential">
+            <div class="project-img-box">
+              <img src="assets/images/elevation_3d.jpg" alt="Skyline Grandeur Luxury Villa by Vishal Jamdhade Buildcon">
+              <span class="project-category-badge">Residential Bungalow</span>
+            </div>
+            <div class="project-content-body">
+              <div class="project-location">📍 Baner, Pune</div>
+              <h3 class="project-card-title">Skyline Grandeur Luxury Villa</h3>
+              <div class="project-specs-grid">
+                <div class="project-spec-item">Plot Area: <strong>4,500 Sq.Ft</strong></div>
+                <div class="project-spec-item">Built-Up: <strong>6,200 Sq.Ft</strong></div>
+                <div class="project-spec-item">Floors: <strong>G + 2 Floors</strong></div>
+                <div class="project-spec-item">Structural: <strong>Seismic Zone III</strong></div>
+              </div>
+              <div class="project-card-footer">
+                <span style="font-size: 0.82rem; color: #888888;">Scope: 2D + 3D + RCC</span>
+                <a href="#" class="btn-view-case" data-case-id="1">
+                  View 10-Step Study →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Commercial Arcade -->
+          <div class="project-card" data-category="commercial">
+            <div class="project-img-box">
+              <img src="assets/images/commercial_complex.jpg" alt="City Crossing Commercial Arcade by Vishal Jamdhade Buildcon">
+              <span class="project-category-badge">Commercial Complex</span>
+            </div>
+            <div class="project-content-body">
+              <div class="project-location">📍 Chhatrapati Sambhajinagar</div>
+              <h3 class="project-card-title">City Crossing Commercial Arcade</h3>
+              <div class="project-specs-grid">
+                <div class="project-spec-item">Plot Area: <strong>12,000 Sq.Ft</strong></div>
+                <div class="project-spec-item">Built-Up: <strong>28,500 Sq.Ft</strong></div>
+                <div class="project-spec-item">Floors: <strong>B + G + 4 Floors</strong></div>
+                <div class="project-spec-item">Structural: <strong>PT Beams 9m Spans</strong></div>
+              </div>
+              <div class="project-card-footer">
+                <span style="font-size: 0.82rem; color: #888888;">Scope: Full Architecture + RCC</span>
+                <a href="#" class="btn-view-case" data-case-id="2">
+                  View 10-Step Study →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Industrial PEB -->
+          <div class="project-card" data-category="industrial">
+            <div class="project-img-box">
+              <img src="assets/images/industrial_warehouse.jpg" alt="LogiTech PEB Mega Warehouse by Vishal Jamdhade Buildcon">
+              <span class="project-category-badge">Industrial PEB</span>
+            </div>
+            <div class="project-content-body">
+              <div class="project-location">📍 Chakan Industrial Zone, Pune</div>
+              <h3 class="project-card-title">LogiTech PEB Mega Warehouse</h3>
+              <div class="project-specs-grid">
+                <div class="project-spec-item">Plot Area: <strong>45,000 Sq.Ft</strong></div>
+                <div class="project-spec-item">Built-Up: <strong>32,000 Sq.Ft</strong></div>
+                <div class="project-spec-item">Clear Height: <strong>11m Single Span</strong></div>
+                <div class="project-spec-item">Structural: <strong>IS 800:2007 PEB</strong></div>
+              </div>
+              <div class="project-card-footer">
+                <span style="font-size: 0.82rem; color: #888888;">Scope: Steel Design + Foundation</span>
+                <a href="#" class="btn-view-case" data-case-id="3">
+                  View 10-Step Study →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Anand Nilayam Eco Bungalow -->
+          <div class="project-card" data-category="residential">
+            <div class="project-img-box">
+              <img src="assets/images/completed_bungalow.jpg" alt="Anand Nilayam Eco Bungalow by Vishal Jamdhade Buildcon">
+              <span class="project-category-badge">Residential Bungalow</span>
+            </div>
+            <div class="project-content-body">
+              <div class="project-location">📍 Nashik, Maharashtra</div>
+              <h3 class="project-card-title">Anand Nilayam Eco Bungalow</h3>
+              <div class="project-specs-grid">
+                <div class="project-spec-item">Plot Area: <strong>3,800 Sq.Ft</strong></div>
+                <div class="project-spec-item">Built-Up: <strong>4,400 Sq.Ft</strong></div>
+                <div class="project-spec-item">Floors: <strong>G + 1 Floor</strong></div>
+                <div class="project-spec-item">Structural: <strong>Slender RCC Frame</strong></div>
+              </div>
+              <div class="project-card-footer">
+                <span style="font-size: 0.82rem; color: #888888;">Scope: Handover Completed</span>
+                <a href="#" class="btn-view-case" data-case-id="4">
+                  View 10-Step Study →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. STRUCTURAL ENGINEERING SECTION (DARK #0F1217)
+         ========================================================================= -->
+    <section class="site-section section-structural-deep" id="structural">
+      <div class="container">
+        <div class="structural-deep-grid">
+          <!-- Content Left -->
+          <div class="structural-content-col">
+            <div class="section-tag tag-steel" data-i18n="nav_structural">ENGINEERING EXCELLENCE</div>
+            <h2>Beauty Above. <br><span class="text-gold-gradient">Engineering Within.</span></h2>
+            <p class="structural-desc">
+              Every column, beam, and foundation we design undergoes rigorous computer-aided finite element analysis to withstand seismic shocks, wind forces, and dead/live loads while optimizing steel consumption by 10% to 15%.
+            </p>
+
+            <div class="is-codes-strip">
+              <span class="is-code-pill">IS 456:2000 (Plain & Reinforced Concrete)</span>
+              <span class="is-code-pill">IS 1893:2016 (Earthquake Resistance)</span>
+              <span class="is-code-pill">IS 875 Part 1-5 (Design Loads)</span>
+              <span class="is-code-pill">IS 800:2007 (Steel Structures)</span>
+              <span class="is-code-pill">IS 13920:2016 (Ductile Detailing)</span>
+            </div>
+
+            <div class="structural-spec-cards">
+              <div class="structural-card">
+                <h4>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  <span>RCC Framework & Ductile Detailing</span>
+                </h4>
+                <p>Optimal concrete mix design, column rebar cages, and ductile detailing for earthquake resistance (IS 13920).</p>
               </div>
 
-              <!-- Email -->
-              <div class="form-group">
-                <label class="form-label" for="formEmail" data-i18n="form_email">Email Address</label>
-                <input type="email" id="formEmail" class="form-input" placeholder="e.g. vishal@example.com">
+              <div class="structural-card">
+                <h4>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  <span>Steel Structural Design & PEB</span>
+                </h4>
+                <p>PEB portal frames, bolted moment connections, gantry girders, and wind load calculations for factories & warehouses.</p>
               </div>
 
-              <!-- Project Type -->
-              <div class="form-group">
-                <label class="form-label" for="formProjectType" data-i18n="form_type">Project Type</label>
-                <select id="formProjectType" class="form-select">
-                  <option value="Bungalow">Residential Bungalow / Villa</option>
-                  <option value="Row House">Row House Scheme</option>
-                  <option value="Flat / Apartment">Flats / Apartment Building</option>
-                  <option value="Commercial Complex">Commercial Complex / Shops</option>
-                  <option value="Office / Showroom">Office / Showroom</option>
-                  <option value="Warehouse / PEB">Industrial Warehouse / PEB Shed</option>
-                  <option value="Renovation">Renovation & Extension</option>
-                  <option value="Other">Other Custom Project</option>
-                </select>
+              <div class="structural-card">
+                <h4>
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  <span>Foundation & Soil Engineering</span>
+                </h4>
+                <p>Isolated, combined, raft, and pile foundations custom engineered according to your site's soil bearing capacity.</p>
+              </div>
+            </div>
+
+            <div>
+              <a href="#contact" class="btn btn-outline-gold">
+                Discuss Your Structural Requirements
+              </a>
+            </div>
+          </div>
+
+          <!-- Visual Right -->
+          <div class="structural-visual-col">
+            <div class="structural-visual-frame cad-corner-box">
+              <img src="assets/images/rcc_structural_model.jpg" alt="3D Structural Engineering Analysis Model - Columns Beams Rebar by Vishal Jamdhade Buildcon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. INTERACTIVE PROJECT ESTIMATOR (WARM WHITE #F6F4EF)
+         ========================================================================= -->
+    <section class="site-section section-estimator" id="estimator">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag" data-i18n="est_tag">INSTANT PROJECT CALCULATOR</div>
+          <h2 class="section-title section-title-dark" data-i18n="est_title">Get An Initial Design Estimate</h2>
+          <p class="section-subtitle section-subtitle-dark" data-i18n="est_subtitle">
+            Select your project specifications to calculate estimated scope, deliverables, and turnaround time.
+          </p>
+        </div>
+
+        <div class="estimator-card">
+          <div class="estimator-layout">
+            <!-- Inputs Left -->
+            <div class="estimator-inputs">
+              <!-- Step 1: Project Type -->
+              <div class="calc-group">
+                <label class="calc-label" data-i18n="est_type_label">1. Select Project Type</label>
+                <div class="type-buttons-row">
+                  <button type="button" class="calc-type-btn active" data-type="bungalow" data-i18n="est_type_bungalow">Bungalow / Villa</button>
+                  <button type="button" class="calc-type-btn" data-type="rowhouse" data-i18n="est_type_rowhouse">Row House / Flats</button>
+                  <button type="button" class="calc-type-btn" data-type="commercial" data-i18n="est_type_commercial">Commercial / Office</button>
+                </div>
               </div>
 
-              <!-- Location -->
-              <div class="form-group">
-                <label class="form-label" for="formLocation" data-i18n="form_location">Site Location / City</label>
-                <input type="text" id="formLocation" class="form-input" placeholder="e.g. Pune, Nashik, Sambhajinagar">
+              <!-- Step 2: Area Range Slider -->
+              <div class="calc-group">
+                <div class="calc-label">
+                  <span data-i18n="est_area_label">2. Built-Up Area (Sq.Ft)</span>
+                  <span class="value-pill" id="calcAreaValue">2,500 Sq.Ft</span>
+                </div>
+                <input type="range" class="calc-range-slider" id="calcAreaSlider" min="800" max="15000" step="100" value="2500" aria-label="Built-Up Area Slider">
+                <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: #888888; font-family: var(--font-mono); margin-top: 0.5rem;">
+                  <span>800 Sq.Ft (Compact)</span>
+                  <span>5,000 Sq.Ft</span>
+                  <span>15,000 Sq.Ft (Large)</span>
+                </div>
               </div>
 
-              <!-- Plot Area -->
-              <div class="form-group">
-                <label class="form-label" for="formPlotArea" data-i18n="form_area">Plot / Built-Up Area</label>
-                <input type="text" id="formPlotArea" class="form-input" placeholder="e.g. 2,500 Sq.Ft">
-              </div>
+              <!-- Step 3: Package Options -->
+              <div class="calc-group">
+                <label class="calc-label" data-i18n="est_pkg_label">3. Required Engineering Package</label>
+                <div class="service-options-group">
+                  <label class="service-option-item">
+                    <input type="radio" name="calcPackage" value="plan2d" class="service-option-radio">
+                    <div>
+                      <strong style="display: block; font-size: 0.95rem; color: #111111;">2D Planning + Architectural Drawings</strong>
+                      <span style="font-size: 0.8rem; color: #666666;">Floor plans, room layouts, dimensioned working blueprints</span>
+                    </div>
+                  </label>
 
-              <!-- Service Required -->
-              <div class="form-group full-width">
-                <label class="form-label" for="formService" data-i18n="form_service">Required Service</label>
-                <select id="formService" class="form-select">
-                  <option value="Full Turnkey (2D + 3D + RCC)">Complete Turnkey (2D Planning + 3D Visualization + RCC Structural Design)</option>
-                  <option value="2D Planning">2D Planning & Architectural Floor Plans</option>
-                  <option value="3D Design">3D Design & Elevation Rendering</option>
-                  <option value="RCC Structural Design">RCC Structural Design & Analysis</option>
-                  <option value="Steel Structure Design">Steel Structure & Warehouse Design</option>
-                  <option value="Working Drawings">Working & Construction Drawings (GFC)</option>
-                  <option value="Estimation & BOQ">Quantity Estimation & BOQ</option>
-                  <option value="Site Consultation">Site Visit & Technical Consultation</option>
-                </select>
-              </div>
+                  <label class="service-option-item">
+                    <input type="radio" name="calcPackage" value="plan3d" class="service-option-radio">
+                    <div>
+                      <strong style="display: block; font-size: 0.95rem; color: #111111;">2D Planning + 3D Realistic Elevations</strong>
+                      <span style="font-size: 0.8rem; color: #666666;">Floor plans + exterior facade renders and color schemes</span>
+                    </div>
+                  </label>
 
-              <!-- Project Details -->
-              <div class="form-group full-width">
-                <label class="form-label" for="formMessage" data-i18n="form_msg">Project Details & Specific Requirements</label>
-                <textarea id="formMessage" class="form-textarea" placeholder="Tell us about your plot orientation, number of floors, budget, or any specific requirements..."></textarea>
-              </div>
-
-              <!-- Document / Drawing Uploader Dropzone -->
-              <div class="form-group full-width">
-                <label class="form-label" data-i18n="form_dropzone">Upload Site Plan / Rough Sketch / Document</label>
-                <div class="file-dropzone" id="fileDropzone">
-                  <div class="dropzone-icon">📁</div>
-                  <div class="dropzone-text" id="fileDropText">Drag and drop your plot sketch or click to browse</div>
-                  <div class="dropzone-hint" data-i18n="form_drop_hint">Supports PDF, JPG, PNG, DWG (Max 15MB)</div>
-                  <input type="file" id="fileUploadInput" class="file-input-hidden" accept=".pdf,.jpg,.jpeg,.png,.dwg">
+                  <label class="service-option-item selected">
+                    <input type="radio" name="calcPackage" value="full" class="service-option-radio" checked>
+                    <div>
+                      <strong style="display: block; font-size: 0.95rem; color: var(--gold-dark);">Full Turnkey: 2D + 3D + RCC Structural + BOQ</strong>
+                      <span style="font-size: 0.8rem; color: #666666;">Complete architecture, computerized RCC structural analysis & BOQ</span>
+                    </div>
+                  </label>
                 </div>
               </div>
             </div>
 
-            <div style="margin-top: 1.75rem;">
-              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" id="submitLeadFormBtn">
-                <span data-i18n="form_submit">Submit Project Enquiry</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
+            <!-- Summary Card Right -->
+            <div class="estimator-summary-box">
+              <div class="summary-header">
+                <h4>Estimated Package Summary</h4>
+                <p>Transparent estimation tailored to Vishal Jamdhade Buildcon standards</p>
+              </div>
+
+              <div class="summary-metric">
+                <span style="color: #AAAAAA;">Estimated Design Budget:</span>
+                <span class="metric-highlight" id="estCostRange">₹40,500 - ₹49,500</span>
+              </div>
+
+              <div class="summary-metric">
+                <span style="color: #AAAAAA;">Estimated Design Timeline:</span>
+                <span style="font-family: var(--font-mono); color: #FFFFFF; font-weight: 600;" id="estDaysRange">16 - 20 Business Days</span>
+              </div>
+
+              <div>
+                <div style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.6rem; color: #FFFFFF;">
+                  Included Deliverables:
+                </div>
+                <ul class="included-deliverables-list" id="estDeliverablesList">
+                  <!-- Populated by estimator.js -->
+                </ul>
+              </div>
+
+              <button type="button" class="btn btn-primary" id="applyEstimateBtn" data-i18n="est_btn" style="width: 100%;">
+                Request Official Proposal For This Estimate
               </button>
             </div>
-          </form>
-        </div>
-
-        <!-- Sidebar Right: Direct Contact & Location -->
-        <div class="contact-sidebar">
-          <div class="contact-info-card">
-            <!-- Phone -->
-            <div class="contact-detail-row">
-              <div class="detail-icon-box">📞</div>
-              <div class="detail-text">
-                <h5 data-i18n="contact_direct_call">Direct Calling Line</h5>
-                <a href="tel:+919923438373" style="font-weight: 700; color: var(--accent-gold-light); font-size: 1.15rem;">
-                  99 23 43 83 73
-                </a>
-              </div>
-            </div>
-
-            <!-- WhatsApp -->
-            <div class="contact-detail-row">
-              <div class="detail-icon-box" style="background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.4); color: #25D366;">💬</div>
-              <div class="detail-text">
-                <h5 data-i18n="contact_wa">WhatsApp Consultation</h5>
-                <a href="#" class="wa-trigger" style="color: #25D366; font-weight: 600;">
-                  Chat Instantly on +91 99 23 43 83 73
-                </a>
-              </div>
-            </div>
-
-            <!-- Email -->
-            <div class="contact-detail-row">
-              <div class="detail-icon-box">✉️</div>
-              <div class="detail-text">
-                <h5>Email Enquiries</h5>
-                <a href="mailto:vishaljamdhade.buildcon@gmail.com">
-                  vishaljamdhade.buildcon@gmail.com
-                </a>
-              </div>
-            </div>
-
-            <!-- Office Address -->
-            <div class="contact-detail-row">
-              <div class="detail-icon-box">📍</div>
-              <div class="detail-text">
-                <h5 data-i18n="contact_office">Office Address</h5>
-                <p>
-                  Vishal Jamdhade Buildcon<br>
-                  Architecture & Structural Engineering Consultancy<br>
-                  Maharashtra, India
-                </p>
-              </div>
-            </div>
-
-            <!-- Hours -->
-            <div class="contact-detail-row">
-              <div class="detail-icon-box">⏰</div>
-              <div class="detail-text">
-                <h5 data-i18n="contact_hours">Business Hours</h5>
-                <p>Monday – Saturday: 9:30 AM – 7:30 PM<br>Sunday: By Prior Appointment</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Embedded Map Card -->
-          <div class="map-embed-card">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04711153715!2d73.7929267954157!3d18.52459859957088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d082e33!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade" 
-              title="Vishal Jamdhade Buildcon Service Area Location Map">
-            </iframe>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- =========================================================================
+         11. PROCESS SECTION (PURE WHITE #FFFFFF)
+         ========================================================================= -->
+    <section class="site-section section-process" id="process">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag" data-i18n="process_tag">OUR METHODOLOGY</div>
+          <h2 class="section-title section-title-dark" data-i18n="process_title">How We Build Your Vision.</h2>
+          <p class="section-subtitle section-subtitle-dark" data-i18n="process_subtitle">
+            A disciplined 6-step journey from raw ground to an engineered reality.
+          </p>
+        </div>
+
+        <div class="process-steps-grid">
+          <!-- Step 1 -->
+          <div class="process-step-item">
+            <div class="process-step-badge">01</div>
+            <h3>01 – Consultation</h3>
+            <p>In-depth discussion to understand your budget, lifestyle, or commercial functional requirements.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-step-item">
+            <div class="process-step-badge">02</div>
+            <h3>02 – Site Analysis</h3>
+            <p>Accurate physical laser measurements, soil condition evaluation, orientation, and municipal bylaws.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-step-item">
+            <div class="process-step-badge">03</div>
+            <h3>03 – 2D Planning</h3>
+            <p>Drafting intelligent room layouts, optimal space utilization, and dimensioned architectural blueprints.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-step-item">
+            <div class="process-step-badge">04</div>
+            <h3>04 – 3D Visualization</h3>
+            <p>Creating hyper-realistic exterior elevations, material textures, and day/twilight illumination.</p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="process-step-item">
+            <div class="process-step-badge">05</div>
+            <h3>05 – Structural Design</h3>
+            <p>Precision RCC / Steel structural analysis, column-beam schedules, and seismic footing detailing.</p>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="process-step-item">
+            <div class="process-step-badge">06</div>
+            <h3>06 – Construction Support</h3>
+            <p>Supplying Good-For-Construction drawings, BOQ estimation, and periodic on-site pre-pour audits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         12. WHY CLIENTS TRUST US (WARM WHITE #F6F4EF)
+         ========================================================================= -->
+    <section class="site-section section-why-us" id="why-us">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag" data-i18n="why_tag">THE BUILDCON ADVANTAGE</div>
+          <h2 class="section-title section-title-dark" data-i18n="why_title">Why Clients Trust Vishal Jamdhade Buildcon</h2>
+          <p class="section-subtitle section-subtitle-dark" data-i18n="why_subtitle">
+            Six foundational values that ensure structural reliability, aesthetic beauty, and investment confidence.
+          </p>
+        </div>
+
+        <div class="why-us-grid">
+          <div class="why-card">
+            <div class="why-icon-box">📐</div>
+            <h4>Integrated Design & Engineering</h4>
+            <p>Both architectural beauty and structural stability are crafted under one roof, preventing costly on-site coordination clashes.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">⚖️</div>
+            <h4>Cost & Steel Optimization</h4>
+            <p>Accurate structural calculations eliminate over-designing and save 10% to 15% on rebar and concrete expenditures.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">📄</div>
+            <h4>Construction-Friendly Drawings</h4>
+            <p>Clear, detailed GFC drawings that site contractors and masons can execute with zero ambiguity or guesswork.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">⏱️</div>
+            <h4>Fast Turnaround Time</h4>
+            <p>Dedicated project milestones ensure your plans and structural reports are delivered punctually as committed.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">🏛️</div>
+            <h4>Municipal Bylaw Compliance</h4>
+            <p>Deep expertise in local municipal submission standards, setback guidelines, and floor space index (FSI) optimization.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon-box">🤝</div>
+            <h4>Client-Centric Transparency</h4>
+            <p>Direct communication with our principal designers and structural engineers throughout the project lifecycle.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         13. VERIFIED STATISTICS (DARK #161616)
+         ========================================================================= -->
+    <section class="site-section section-statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-value">150<span>+</span></div>
+            <div class="stat-title" data-i18n="stat_projects_label">Projects Designed</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value">12<span>+</span></div>
+            <div class="stat-title" data-i18n="stat_years_label">Years Experience</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value">1.5M<span>+</span></div>
+            <div class="stat-title" data-i18n="stat_area_label">Sq.Ft Planned & Engineered</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value">100<span>%</span></div>
+            <div class="stat-title" data-i18n="stat_safety_label">Structural Safety Focus</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         14. TESTIMONIALS (WARM WHITE #F6F4EF)
+         ========================================================================= -->
+    <section class="site-section section-testimonials">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">CLIENT COMMENDATIONS</div>
+          <h2 class="section-title section-title-dark">What Our Clients Say About Us</h2>
+          <p class="section-subtitle section-subtitle-dark">Verified feedback from bungalow owners, commercial developers, and industrial plant directors.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                "Vishal Jamdhade Buildcon designed our 5-BHK luxury bungalow in Baner, Pune. The 3D elevation was so realistic that the final building looks identical to the render! Their RCC structural drawings also saved us over ₹3.5 Lakhs in steel rebar optimization."
+              </p>
+            </div>
+            <div class="test-author-row">
+              <div class="author-avatar-badge">RK</div>
+              <div class="author-credentials">
+                <h5>Dr. R. Kulkarni</h5>
+                <span>Bungalow Owner • Baner, Pune</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                "For our 4-story commercial arcade, we required clear column-free retail showroom spans. The structural engineering team at Vishal Jamdhade Buildcon delivered outstanding post-tensioned beam calculations. Fast, professional, and compliant with all bylaws!"
+              </p>
+            </div>
+            <div class="test-author-row">
+              <div class="author-avatar-badge">MS</div>
+              <div class="author-credentials">
+                <h5>Mr. Manoj Shinde</h5>
+                <span>Managing Partner • City Crossing Arcade</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                "Designing a 32,000 sq.ft industrial steel warehouse needs exact PEB wind and crane load calculations. Their team provided complete fabrication shop drawings and anchor bolt templates within 12 days. Highly recommended structural consultants!"
+              </p>
+            </div>
+            <div class="test-author-row">
+              <div class="author-avatar-badge">VP</div>
+              <div class="author-credentials">
+                <h5>Vikram Patil</h5>
+                <span>Director • LogiTech Logistics Park</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         15. FAQ ACCORDION (PURE WHITE #FFFFFF)
+         ========================================================================= -->
+    <section class="site-section section-faq" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag" data-i18n="nav_faq">FREQUENTLY ASKED QUESTIONS</div>
+          <h2 class="section-title section-title-dark">Answers to Common Architectural & Structural Queries</h2>
+          <p class="section-subtitle section-subtitle-dark">Everything you need to know about our design process, drawings, timelines, and fees.</p>
+        </div>
+
+        <div class="faq-container">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Do you provide both 2D planning and 3D architectural elevations?</span>
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes, absolutely! We provide complete end-to-end architectural solutions starting from conceptual 2D floor plans, furniture layouts, dimensioned working drawings, to photorealistic 3D exterior elevations, 3D floor cutaways, and 360-degree virtual walkthroughs.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Do you provide RCC structural design and earthquake-resistant drawings?</span>
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. Structural safety is our primary engineering specialty. We provide complete RCC structural analysis and design conforming to IS 456:2000 and IS 1893:2016 (Earthquake Resistance), including isolated/raft foundations, column layouts, beam schedules, and slab reinforcement details.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Do you design industrial steel structures and warehouse sheds?</span>
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes, we specialize in Pre-Engineered Buildings (PEB), industrial factories, warehouse sheds, and heavy steel structures conforming to IS 800:2007. We deliver anchor bolt layouts, moment connection detailing, purlin schedules, and fabrication drawings.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>What are Good-For-Construction (GFC) working drawings?</span>
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                GFC working drawings are the comprehensive blueprints given directly to your site contractor, engineer, and mason. They include exact dimensional wall offsets, electrical conduit layouts, plumbing/drainage routes, door-window schedules, and staircase structural details so the building is constructed with zero errors.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Do you provide material quantity estimation and BOQ?</span>
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes, we prepare detailed Bill of Quantities (BOQ) with accurate material takeoffs for cement, sand, aggregate, structural steel reinforcement (Bar Bending Schedules), brickwork, plaster, flooring, and paint. This protects you from contractor over-billing.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Can you modify or verify an existing architectural floor plan?</span>
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. If you already have a preliminary layout from a local builder or draftsman, our architects and structural engineers can review it for space optimization, Vastu alignment, structural load feasibility, and municipal bylaw compliance.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Do you visit the construction site for inspection?</span>
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes, we provide site consultation services including initial site laser measurement, foundation excavation checking, and pre-concreting column/beam/slab reinforcement checking to verify that the contractor has placed rebar exactly as per our structural drawings.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>How do I get an official quotation for my project?</span>
+              <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                You can simply use our interactive Estimator Tool on this page or fill out the enquiry form with your plot dimensions and required services. You can also call us directly at <strong>99 23 43 83 73</strong> or send your plot sketch on WhatsApp for an immediate consultation.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         16. CONTACT & LEAD GENERATION SECTION (DARK #111111)
+         ========================================================================= -->
+    <section class="site-section section-contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag" data-i18n="contact_tag">GET IN TOUCH</div>
+          <h2 class="section-title section-title-light">Have A <span class="gold-accent">Project</span> In Mind?</h2>
+          <p class="section-subtitle section-subtitle-light" data-i18n="contact_subtitle">
+            Let's turn your vision into a practical, structurally safe, and visually remarkable reality.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Form Left -->
+          <div class="contact-form-card cad-corner-box">
+            <h3 style="font-size: 1.5rem; color: #FFFFFF; margin-bottom: 0.5rem;">Submit Project Enquiry</h3>
+            <p style="font-size: 0.88rem; color: #888888; margin-bottom: 2rem;">Fill in your requirements below for a complimentary preliminary consultation.</p>
+
+            <form id="projectLeadForm">
+              <div class="form-grid">
+                <!-- Name -->
+                <div class="form-group">
+                  <label class="form-label" for="formName" data-i18n="form_name">Full Name *</label>
+                  <input type="text" id="formName" class="form-input" placeholder="e.g. Vishal Jamdhade" required>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                  <label class="form-label" for="formPhone" data-i18n="form_phone">Mobile Number *</label>
+                  <input type="tel" id="formPhone" class="form-input" placeholder="e.g. 99 23 43 83 73" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label class="form-label" for="formEmail" data-i18n="form_email">Email Address</label>
+                  <input type="email" id="formEmail" class="form-input" placeholder="e.g. vishal@example.com">
+                </div>
+
+                <!-- Project Type -->
+                <div class="form-group">
+                  <label class="form-label" for="formProjectType" data-i18n="form_type">Project Type</label>
+                  <select id="formProjectType" class="form-select">
+                    <option value="Bungalow">Residential Bungalow / Villa</option>
+                    <option value="Row House">Row House Scheme</option>
+                    <option value="Flat / Apartment">Flats / Apartment Building</option>
+                    <option value="Commercial Complex">Commercial Complex / Shops</option>
+                    <option value="Office / Showroom">Office / Showroom</option>
+                    <option value="Warehouse / PEB">Industrial Warehouse / PEB Shed</option>
+                    <option value="Renovation">Renovation & Extension</option>
+                    <option value="Other">Other Custom Project</option>
+                  </select>
+                </div>
+
+                <!-- Location -->
+                <div class="form-group">
+                  <label class="form-label" for="formLocation" data-i18n="form_location">Site Location / City</label>
+                  <input type="text" id="formLocation" class="form-input" placeholder="e.g. Pune, Nashik, Sambhajinagar">
+                </div>
+
+                <!-- Plot Area -->
+                <div class="form-group">
+                  <label class="form-label" for="formPlotArea" data-i18n="form_area">Plot / Built-Up Area</label>
+                  <input type="text" id="formPlotArea" class="form-input" placeholder="e.g. 2,500 Sq.Ft">
+                </div>
+
+                <!-- Service Required -->
+                <div class="form-group full-width">
+                  <label class="form-label" for="formService" data-i18n="form_service">Required Service</label>
+                  <select id="formService" class="form-select">
+                    <option value="Full Turnkey (2D + 3D + RCC)">Complete Turnkey (2D Planning + 3D Visualization + RCC Structural Design)</option>
+                    <option value="2D Planning">2D Planning & Architectural Floor Plans</option>
+                    <option value="3D Design">3D Design & Elevation Rendering</option>
+                    <option value="RCC Structural Design">RCC Structural Design & Analysis</option>
+                    <option value="Steel Structure Design">Steel Structure & Warehouse Design</option>
+                    <option value="Working Drawings">Working & Construction Drawings (GFC)</option>
+                    <option value="Estimation & BOQ">Quantity Estimation & BOQ</option>
+                    <option value="Site Consultation">Site Visit & Technical Consultation</option>
+                  </select>
+                </div>
+
+                <!-- Project Details -->
+                <div class="form-group full-width">
+                  <label class="form-label" for="formMessage" data-i18n="form_msg">Project Details & Specific Requirements</label>
+                  <textarea id="formMessage" class="form-textarea" placeholder="Tell us about your plot orientation, number of floors, budget, or any specific requirements..."></textarea>
+                </div>
+
+                <!-- Document / Drawing Uploader Dropzone -->
+                <div class="form-group full-width">
+                  <label class="form-label" data-i18n="form_dropzone">Upload Site Plan / Rough Sketch / Document</label>
+                  <div class="file-dropzone" id="fileDropzone">
+                    <div class="dropzone-icon">📁</div>
+                    <div class="dropzone-text" id="fileDropText">Drag and drop your plot sketch or click to browse</div>
+                    <div class="dropzone-hint" data-i18n="form_drop_hint">Supports PDF, JPG, PNG, DWG (Max 15MB)</div>
+                    <input type="file" id="fileUploadInput" class="file-input-hidden" accept=".pdf,.jpg,.jpeg,.png,.dwg">
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 2rem;">
+                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" id="submitLeadFormBtn">
+                  <span data-i18n="form_submit">Submit Project Enquiry</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Sidebar Right: Direct Contact & Location -->
+          <div class="contact-sidebar">
+            <div class="contact-info-card cad-corner-box">
+              <!-- Phone -->
+              <div class="contact-detail-row">
+                <div class="detail-icon-box">📞</div>
+                <div class="detail-text">
+                  <h5>Direct Calling Line</h5>
+                  <a href="tel:+919923438373" style="font-weight: 700; color: var(--gold-light); font-size: 1.2rem;">
+                    99 23 43 83 73
+                  </a>
+                </div>
+              </div>
+
+              <!-- WhatsApp -->
+              <div class="contact-detail-row">
+                <div class="detail-icon-box" style="background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.4); color: #25D366;">💬</div>
+                <div class="detail-text">
+                  <h5>WhatsApp Consultation</h5>
+                  <a href="#" class="wa-action-btn" style="color: #25D366; font-weight: 600;">
+                    Chat Instantly on +91 99 23 43 83 73
+                  </a>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="contact-detail-row">
+                <div class="detail-icon-box">✉️</div>
+                <div class="detail-text">
+                  <h5>Email Enquiries</h5>
+                  <a href="mailto:vishaljamdhade.buildcon@gmail.com">
+                    vishaljamdhade.buildcon@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Office Address -->
+              <div class="contact-detail-row">
+                <div class="detail-icon-box">📍</div>
+                <div class="detail-text">
+                  <h5>Office Address & Serving Regions</h5>
+                  <p>
+                    Vishal Jamdhade Buildcon<br>
+                    Architecture & Structural Engineering Consultancy<br>
+                    Serving Pune, Nashik, Sambhajinagar, Mumbai & Maharashtra
+                  </p>
+                </div>
+              </div>
+
+              <!-- Hours -->
+              <div class="contact-detail-row">
+                <div class="detail-icon-box">⏰</div>
+                <div class="detail-text">
+                  <h5>Business Hours</h5>
+                  <p>Monday – Saturday: 9:30 AM – 7:30 PM<br>Sunday: By Prior Appointment</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Embedded Map -->
+            <div class="map-embed-card">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04711153715!2d73.7929267954157!3d18.52459859957088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d082e33!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade" 
+                title="Vishal Jamdhade Buildcon Service Area Location Map">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- =========================================================================
-       15. FOOTER
+       17. SITE FOOTER
        ========================================================================= -->
   <footer class="site-footer">
     <div class="container">
@@ -1468,14 +1511,12 @@
         <!-- Col 1: Brand -->
         <div class="footer-brand">
           <div class="brand-logo">
-            <div class="logo-symbol">
-              <svg viewBox="0 0 24 24">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
-            </div>
-            <div class="brand-text">
-              <span class="brand-name">VISHAL JAMDHADE <span>BUILDCON</span></span>
-              <span class="brand-tagline" data-i18n="tagline">Building Trust, Creating Legacy</span>
+            <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            <div class="brand-text-block">
+              <span class="brand-title">VISHAL JAMDHADE <span>BUILDCON</span></span>
+              <span class="brand-tagline">Building Trust, Creating Legacy</span>
             </div>
           </div>
           <p>
@@ -1485,84 +1526,86 @@
 
         <!-- Col 2: Quick Links -->
         <div class="footer-col">
-          <h4>Quick Navigation</h4>
-          <div class="footer-links">
-            <a href="#home" data-i18n="nav_home">Home</a>
-            <a href="#about" data-i18n="nav_about">About Us</a>
-            <a href="#services" data-i18n="nav_services">Services</a>
-            <a href="#showcase" data-i18n="nav_residential">Residential Projects</a>
-            <a href="#commercial" data-i18n="nav_commercial">Commercial Projects</a>
-            <a href="#structural" data-i18n="nav_structural">Structural Design</a>
-            <a href="#estimator" data-i18n="nav_estimator">Project Estimator</a>
-            <a href="#contact" data-i18n="nav_contact">Contact Us</a>
-          </div>
+          <h4>Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#experience3d">3D Studio</a></li>
+            <li><a href="#showcase">Design Lifecycle</a></li>
+            <li><a href="#projects">Project Portfolio</a></li>
+            <li><a href="#structural">Structural Design</a></li>
+            <li><a href="#estimator">Project Estimator</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
         </div>
 
         <!-- Col 3: Services -->
         <div class="footer-col">
-          <h4>Our Core Services</h4>
-          <div class="footer-links">
-            <a href="#services">2D Planning & Floor Plans</a>
-            <a href="#services">3D Elevation & Visualization</a>
-            <a href="#structural">RCC Structural Design</a>
-            <a href="#structural">Steel Structure & PEB Design</a>
-            <a href="#services">Working & Construction Sets</a>
-            <a href="#services">Quantity Estimation & BOQ</a>
-            <a href="#services">Site Inspection & Supervision</a>
-          </div>
+          <h4>Core Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#services">2D Planning & Floor Plans</a></li>
+            <li><a href="#services">3D Elevation & Visualization</a></li>
+            <li><a href="#structural">RCC Structural Design</a></li>
+            <li><a href="#structural">Steel Structure & PEB Design</a></li>
+            <li><a href="#services">Working & Construction Sets</a></li>
+            <li><a href="#services">Quantity Estimation & BOQ</a></li>
+            <li><a href="#services">Site Inspection & Supervision</a></li>
+          </ul>
         </div>
 
         <!-- Col 4: Contact -->
         <div class="footer-col">
           <h4>Direct Connect</h4>
-          <div class="footer-links">
-            <a href="tel:+919923438373">📞 Phone: 99 23 43 83 73</a>
-            <a href="#" class="wa-trigger">💬 WhatsApp Consultation</a>
-            <a href="mailto:vishaljamdhade.buildcon@gmail.com">✉️ vishaljamdhade.buildcon@gmail.com</a>
-            <span style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem; display: block;">
-              📍 Maharashtra, India
-            </span>
-          </div>
+          <ul class="footer-nav-list">
+            <li><a href="tel:+919923438373">📞 Phone: 99 23 43 83 73</a></li>
+            <li><a href="#" class="wa-action-btn">💬 WhatsApp Consultation</a></li>
+            <li><a href="mailto:vishaljamdhade.buildcon@gmail.com">✉️ vishaljamdhade.buildcon@gmail.com</a></li>
+            <li style="color: #666666; font-size: 0.84rem; margin-top: 0.5rem;">
+              📍 Maharashtra, India (Serving Pune, Nashik, Sambhajinagar, Mumbai)
+            </li>
+          </ul>
         </div>
       </div>
 
-      <!-- Footer Bottom -->
       <div class="footer-bottom">
         <div>
           © 2026 <strong>Vishal Jamdhade Buildcon</strong>. All Rights Reserved. Tagline: <em>"Building Trust, Creating Legacy"</em>.
         </div>
-        <div>
-          Architecture • 2D Planning • 3D Visualization • Structural Engineering
+        <div style="font-family: var(--font-mono); font-size: 0.76rem; color: #666666;">
+          ARCHITECTURE • 2D PLANNING • 3D VISUALIZATION • STRUCTURAL ENGINEERING
         </div>
       </div>
     </div>
   </footer>
 
   <!-- =========================================================================
-       16. FLOATING WHATSAPP & MOBILE ACTION BAR
+       18. FLOATING WHATSAPP BUTTON & MOBILE STICKY BAR
        ========================================================================= -->
-  <!-- Floating WhatsApp Button -->
-  <a href="#" class="floating-whatsapp-btn wa-trigger" aria-label="Chat on WhatsApp with Vishal Jamdhade Buildcon" title="Chat on WhatsApp">
+  <a href="#" class="floating-whatsapp-btn wa-action-btn" aria-label="Chat on WhatsApp with Vishal Jamdhade Buildcon" title="Chat on WhatsApp">
     <div class="whatsapp-pulse"></div>
     <svg viewBox="0 0 24 24">
       <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c4.56 0 8.27 3.71 8.27 8.27 0 2.21-.86 4.29-2.42 5.85s-3.64 2.42-5.85 2.42c-1.44 0-2.86-.38-4.11-1.12l-.29-.17-3.05.8 1.05-2.97-.19-.31a8.192 8.192 0 01-1.26-4.5c0-4.56 3.71-8.27 8.27-8.27m4.84 11.64c-.2-.1-.1.21-.42-.05-.31-.15-1.85-.91-2.14-1.02-.29-.1-.5-.15-.71.15-.21.31-.81 1.02-1 1.23-.18.2-.37.23-.68.08-.31-.15-1.31-.48-2.5-1.54-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.55.15-.18.2-.31.31-.51.1-.2.05-.38-.03-.53-.08-.15-.71-1.71-.97-2.35-.26-.62-.52-.53-.71-.54h-.61c-.2 0-.53.08-.81.38-.28.31-1.07 1.05-1.07 2.56 0 1.51 1.1 2.97 1.25 3.17.15.2 2.16 3.3 5.23 4.63.73.32 1.3.51 1.74.65.73.23 1.4.2 1.93.12.59-.09 1.85-.75 2.11-1.48.26-.72.26-1.34.18-1.47-.08-.13-.28-.2-.59-.35z"/>
     </svg>
   </a>
 
-  <!-- Mobile Sticky Call & WhatsApp Action Bar -->
+  <!-- Mobile Sticky Call, WhatsApp & Quote Action Bar -->
   <div class="mobile-sticky-bar">
     <div class="mobile-sticky-grid">
       <a href="tel:+919923438373" class="mobile-action-btn mobile-call-btn">
-        📞 <span data-i18n="call_now">Call Now</span>: 99 23 43 83 73
+        📞 <span data-i18n="call_now">Call</span>
       </a>
-      <a href="#" class="mobile-action-btn mobile-wa-btn wa-trigger">
-        💬 <span data-i18n="wa_chat_hint">WhatsApp Us</span>
+      <a href="#" class="mobile-action-btn mobile-wa-btn wa-action-btn">
+        💬 <span data-i18n="wa_chat_hint">WhatsApp</span>
+      </a>
+      <a href="#estimator" class="mobile-action-btn mobile-quote-btn">
+        📐 <span data-i18n="quick_quote">Estimate</span>
       </a>
     </div>
   </div>
 
   <!-- =========================================================================
-       17. CASE STUDY 10-STEP MODAL
+       19. CASE STUDY 10-STEP DEEP DIVE MODAL
        ========================================================================= -->
   <div class="modal-overlay" id="caseStudyModal">
     <div class="modal-container">
@@ -1570,35 +1613,35 @@
       
       <div style="margin-bottom: 1.5rem;">
         <span class="section-tag" id="modalProjectBadge">Residential Bungalow • Baner, Pune</span>
-        <h2 id="modalProjectTitle" style="margin-top: 0.5rem; font-size: 2rem;">Skyline Grandeur Luxury Villa</h2>
+        <h2 id="modalProjectTitle" style="margin-top: 0.5rem; font-size: 2rem; color: #FFFFFF;">Skyline Grandeur Luxury Villa</h2>
       </div>
 
-      <div style="border-radius: var(--radius-md); overflow: hidden; margin-bottom: 2rem; max-height: 380px;">
+      <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 2rem; max-height: 380px;">
         <img src="assets/images/elevation_3d.jpg" alt="Project Case Study Visual" id="modalProjectImg" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
 
       <!-- Quick Specs Strip -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; background: var(--bg-card); padding: 1.25rem; border-radius: var(--radius-sm); margin-bottom: 2rem; border: 1px solid var(--border-subtle);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; background: #111111; padding: 1.25rem; border-radius: var(--radius-xs); margin-bottom: 2rem; border: 1px solid var(--border-dark-medium);">
         <div>
-          <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Client</span>
-          <strong id="modalClientName" style="color: var(--accent-gold-light);">Dr. R. Kulkarni</strong>
+          <span style="font-size: 0.72rem; color: #888888; display: block; font-family: var(--font-mono); text-transform: uppercase;">Client</span>
+          <strong id="modalClientName" style="color: var(--gold-primary);">Dr. R. Kulkarni</strong>
         </div>
         <div>
-          <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Plot Area</span>
-          <strong id="modalPlotArea">4,500 Sq.Ft</strong>
+          <span style="font-size: 0.72rem; color: #888888; display: block; font-family: var(--font-mono); text-transform: uppercase;">Plot Area</span>
+          <strong id="modalPlotArea" style="color: #FFFFFF;">4,500 Sq.Ft</strong>
         </div>
         <div>
-          <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Built-up Area</span>
-          <strong id="modalBuiltupArea">6,200 Sq.Ft</strong>
+          <span style="font-size: 0.72rem; color: #888888; display: block; font-family: var(--font-mono); text-transform: uppercase;">Built-up Area</span>
+          <strong id="modalBuiltupArea" style="color: #FFFFFF;">6,200 Sq.Ft</strong>
         </div>
         <div>
-          <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Floors</span>
-          <strong id="modalFloors">G + 2 Floors</strong>
+          <span style="font-size: 0.72rem; color: #888888; display: block; font-family: var(--font-mono); text-transform: uppercase;">Floors</span>
+          <strong id="modalFloors" style="color: #FFFFFF;">G + 2 Floors</strong>
         </div>
       </div>
 
-      <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Complete 10-Stage Architectural & Engineering Lifecycle</h3>
-      <p style="font-size: 0.92rem; color: var(--text-secondary);">Comprehensive breakdown of how Vishal Jamdhade Buildcon planned and executed this structure.</p>
+      <h3 style="font-size: 1.4rem; color: #FFFFFF; margin-bottom: 0.35rem;">Complete 10-Stage Architectural & Engineering Lifecycle</h3>
+      <p style="font-size: 0.92rem; color: #AAAAAA; margin-bottom: 1.5rem;">Comprehensive breakdown of how Vishal Jamdhade Buildcon planned and executed this landmark structure.</p>
 
       <!-- 10-Step Timeline -->
       <div class="case-steps-timeline">
@@ -1627,7 +1670,7 @@
           <p id="step6Visualization"></p>
         </div>
         <div class="case-step-item">
-          <h4>7. Structural Design & Analysis</h4>
+          <h4>7. Structural Design & FEA Analysis</h4>
           <p id="step7Structural"></p>
         </div>
         <div class="case-step-item">
@@ -1645,7 +1688,7 @@
       </div>
 
       <div style="margin-top: 2.5rem; text-align: center;">
-        <a href="#contact" class="btn btn-primary" onclick="document.getElementById('caseStudyModal').classList.remove('active');">
+        <a href="#contact" class="btn btn-primary" onclick="caseStudyModal.close();">
           Enquire About A Similar Project
         </a>
       </div>
@@ -1654,7 +1697,9 @@
 
   <!-- Scripts -->
   <script src="js/translations.js"></script>
+  <script src="js/case-studies.js"></script>
   <script src="js/estimator.js"></script>
+  <script src="js/three-scene.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

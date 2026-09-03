@@ -1,0 +1,949 @@
+/* ==========================================================================
+   VISHAL JAMDHADE BUILDCON — SECTION STYLES & LAYOUT RHYTHM
+   ========================================================================== */
+
+/* --- SECTION PADDING & GENERAL STYLES --- */
+.site-section {
+  position: relative;
+  padding: var(--section-pad-desktop);
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .site-section {
+    padding: var(--section-pad-tablet);
+  }
+}
+
+@media (max-width: 768px) {
+  .site-section {
+    padding: var(--section-pad-mobile);
+  }
+}
+
+.section-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 4rem auto;
+}
+
+.section-header.text-left {
+  text-align: left;
+  margin-left: 0;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (DARK #111111)
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: clamp(6.5rem, 12vh, 8.5rem);
+  padding-bottom: 2.5rem;
+  background-color: #0E0E0E;
+  background-image: 
+    radial-gradient(circle at 75% 30%, rgba(83, 107, 120, 0.25) 0%, transparent 55%),
+    linear-gradient(to bottom, rgba(14, 14, 14, 0.5) 0%, #0E0E0E 100%);
+  overflow: hidden;
+}
+
+/* Hero Background Architectural Image Layer */
+.hero-bg-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  opacity: 0.38;
+  pointer-events: none;
+  z-index: 1;
+  mask-image: radial-gradient(ellipse at 80% 50%, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 80% 50%, black 40%, transparent 80%);
+}
+
+.hero-bg-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 5.2vw, 4.8rem);
+  font-weight: 800;
+  line-height: 1.08;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.hero-title .gold-word {
+  color: var(--gold-primary);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title .gold-word::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gold-primary);
+  opacity: 0.6;
+}
+
+.hero-description {
+  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  color: #BDBDBD;
+  line-height: 1.7;
+  max-width: 580px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.75rem;
+}
+
+.hero-trust-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.trust-chip {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #CCCCCC;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.trust-chip svg {
+  width: 14px;
+  height: 14px;
+  color: var(--gold-primary);
+}
+
+/* Floating 3D/Interactive Preview in Hero */
+.hero-visual-col {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-media-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(201, 168, 106, 0.35);
+  box-shadow: var(--shadow-deep);
+  background: #111111;
+}
+
+.hero-media-card img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.hero-media-card:hover img {
+  transform: scale(1.03);
+}
+
+.hero-cad-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+  padding: 1.5rem 1.25rem 1rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--cad-cyan);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Floating Architectural IS Code Badge */
+.hero-floating-badge {
+  position: absolute;
+  top: -1.25rem;
+  right: -1.25rem;
+  background: rgba(22, 22, 22, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--gold-primary);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: float-slow 4s ease-in-out infinite;
+  z-index: 4;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.floating-badge-icon {
+  font-size: 1.5rem;
+}
+
+.floating-badge-text h5 {
+  font-size: 0.85rem;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.floating-badge-text p {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--gold-light);
+}
+
+/* Live Counter Ribbon */
+.hero-stats-ribbon {
+  position: relative;
+  z-index: 3;
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  background: rgba(22, 22, 22, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-dark-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem 2rem;
+}
+
+.hero-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-right: 1px solid var(--border-dark-subtle);
+}
+
+.hero-stat-item:last-child {
+  border-right: none;
+}
+
+.hero-stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.hero-stat-number .gold-plus {
+  color: var(--gold-primary);
+}
+
+.hero-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   2. ABOUT SECTION (WARM ARCHITECTURAL WHITE #F6F4EF)
+   ========================================================================== */
+.section-about {
+  background-color: var(--bg-warm-white);
+  color: var(--text-dark-body);
+}
+
+.about-editorial-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.about-visual-stack {
+  position: relative;
+}
+
+.about-main-image {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.about-main-image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+.about-seal-card {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  background: #161616;
+  color: #FFFFFF;
+  padding: 1.75rem 2rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gold-primary);
+  box-shadow: var(--shadow-deep);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.about-seal-card .seal-num {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  line-height: 1;
+}
+
+.about-seal-card .seal-text {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #D1D1D1;
+  text-transform: uppercase;
+}
+
+.about-text-content p {
+  font-size: 1.05rem;
+  color: var(--text-dark-muted);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.about-pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.about-pillar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.about-pillar-item h4 {
+  font-size: 1.05rem;
+  color: var(--text-dark-title);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-pillar-item h4 svg {
+  width: 18px;
+  height: 18px;
+  color: var(--gold-dark);
+  flex-shrink: 0;
+}
+
+.about-pillar-item p {
+  font-size: 0.88rem;
+  color: var(--text-dark-muted);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   3. DESIGN PHILOSOPHY (DARK #141414)
+   ========================================================================== */
+.section-philosophy {
+  background-color: #141414;
+  color: #FFFFFF;
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.philosophy-quote-mark {
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--gold-primary);
+  opacity: 0.5;
+  margin-bottom: -1rem;
+}
+
+.philosophy-statement {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin-bottom: 1.75rem;
+}
+
+.philosophy-statement span {
+  color: var(--gold-primary);
+}
+
+.philosophy-desc {
+  font-size: 1.1rem;
+  color: #AAAAAA;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.philosophy-visual-card {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(83, 107, 120, 0.4);
+  box-shadow: var(--shadow-deep);
+}
+
+.philosophy-visual-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   4. 3D ARCHITECTURAL EXPERIENCE SECTION (DARK #111111)
+   ========================================================================== */
+.section-3d-experience {
+  background-color: var(--bg-dark-primary);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   5. SERVICES SECTION (PURE WHITE #FFFFFF)
+   ========================================================================== */
+.section-services {
+  background-color: var(--bg-pure-white);
+  color: var(--text-dark-body);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+}
+
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   6. BLUEPRINT TO BUILT (DARK #15181E)
+   ========================================================================== */
+.section-blueprint-built {
+  background: #14171D;
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   7. PROJECT PORTFOLIO (DARK #111111)
+   ========================================================================== */
+.section-portfolio {
+  background-color: var(--bg-dark-primary);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   8. STRUCTURAL ENGINEERING DEEP DIVE (DARK #111111)
+   ========================================================================== */
+.section-structural-deep {
+  background-color: #0F1217;
+  color: #FFFFFF;
+}
+
+.structural-deep-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.structural-content-col h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+}
+
+.structural-desc {
+  font-size: 1.05rem;
+  color: #BBBBBB;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.is-codes-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 2.25rem;
+}
+
+.structural-spec-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.25rem;
+}
+
+.structural-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(83, 107, 120, 0.3);
+  border-radius: var(--radius-xs);
+  padding: 1.25rem 1.5rem;
+  transition: all var(--transition-fast);
+}
+
+.structural-card:hover {
+  border-color: var(--cad-cyan);
+  background: rgba(56, 189, 248, 0.04);
+}
+
+.structural-card h4 {
+  font-size: 1.05rem;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.structural-card h4 svg {
+  width: 18px;
+  height: 18px;
+  color: var(--cad-cyan);
+}
+
+.structural-card p {
+  font-size: 0.88rem;
+  color: #A0A0A0;
+  line-height: 1.6;
+}
+
+.structural-visual-col {
+  position: relative;
+}
+
+.structural-visual-frame {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  background: #0D0E12;
+}
+
+.structural-visual-frame img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   9. INTERACTIVE ESTIMATOR (WARM WHITE #F6F4EF)
+   ========================================================================== */
+.section-estimator {
+  background-color: var(--bg-warm-white);
+  color: var(--text-dark-body);
+}
+
+/* ==========================================================================
+   10. PROCESS SECTION (PURE WHITE #FFFFFF)
+   ========================================================================== */
+.section-process {
+  background-color: var(--bg-pure-white);
+  color: var(--text-dark-body);
+}
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+  position: relative;
+}
+
+.process-step-item {
+  background: var(--bg-warm-white);
+  border: 1px solid var(--border-light-medium);
+  border-radius: var(--radius-xs);
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.process-step-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-subtle);
+}
+
+.process-step-badge {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--gold-dark);
+  line-height: 1;
+}
+
+.process-step-item h3 {
+  font-size: 1.05rem;
+  color: var(--text-dark-title);
+  line-height: 1.3;
+}
+
+.process-step-item p {
+  font-size: 0.84rem;
+  color: var(--text-dark-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .process-steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   11. WHY CLIENTS TRUST US (WARM WHITE #F6F4EF)
+   ========================================================================== */
+.section-why-us {
+  background-color: var(--bg-warm-white);
+  color: var(--text-dark-body);
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.why-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light-medium);
+  border-radius: var(--radius-sm);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all var(--transition-smooth);
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+  border-color: rgba(201, 168, 106, 0.4);
+}
+
+.why-icon-box {
+  font-size: 1.85rem;
+  margin-bottom: 0.35rem;
+}
+
+.why-card h4 {
+  font-size: 1.15rem;
+  color: var(--text-dark-title);
+  line-height: 1.3;
+}
+
+.why-card p {
+  font-size: 0.92rem;
+  color: var(--text-dark-muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   12. VERIFIED STATISTICS SECTION (DARK #161616)
+   ========================================================================== */
+.section-statistics {
+  background-color: #161616;
+  color: #FFFFFF;
+  border-top: 1px solid var(--border-dark-subtle);
+  border-bottom: 1px solid var(--border-dark-subtle);
+  padding: 5rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.stat-value span {
+  color: var(--gold-primary);
+}
+
+.stat-title {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ==========================================================================
+   13. TESTIMONIALS (WARM WHITE #F6F4EF)
+   ========================================================================== */
+.section-testimonials {
+  background-color: var(--bg-warm-white);
+  color: var(--text-dark-body);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light-medium);
+  border-radius: var(--radius-sm);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-smooth);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+.test-stars {
+  color: var(--gold-primary);
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+.test-quote {
+  font-size: 0.98rem;
+  color: #444444;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.test-author-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 1.25rem;
+}
+
+.author-avatar-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gold-primary);
+  color: #111111;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-credentials h5 {
+  font-size: 1.02rem;
+  color: var(--text-dark-title);
+  margin-bottom: 2px;
+}
+
+.author-credentials span {
+  font-size: 0.8rem;
+  color: var(--text-dark-muted);
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   14. FAQ ACCORDION (PURE WHITE #FFFFFF)
+   ========================================================================== */
+.section-faq {
+  background-color: var(--bg-pure-white);
+  color: var(--text-dark-body);
+}
+
+/* ==========================================================================
+   15. CONTACT & LEAD GENERATION (DARK #111111)
+   ========================================================================== */
+.section-contact {
+  background: linear-gradient(180deg, #111111 0%, #0c0f14 100%);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   16. FOOTER (DARK #0A0A0A)
+   ========================================================================== */
+.site-footer {
+  background-color: #0A0A0A;
+  color: #888888;
+  border-top: 1px solid var(--border-dark-subtle);
+  padding: 5rem 0 2rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #999999;
+  margin-top: 1.25rem;
+  max-width: 320px;
+}
+
+.footer-col h4 {
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-nav-list a {
+  font-size: 0.88rem;
+  color: #999999;
+  transition: color var(--transition-fast);
+}
+
+.footer-nav-list a:hover {
+  color: var(--gold-primary);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .hero-grid,
+  .about-editorial-grid,
+  .philosophy-grid,
+  .structural-deep-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .hero-stats-ribbon {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
