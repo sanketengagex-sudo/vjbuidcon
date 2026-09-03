@@ -270,7 +270,9 @@ class BuildconMasterApp {
       const type = document.getElementById('formProjectType').value;
       const location = document.getElementById('formLocation').value.trim() || 'Maharashtra';
       const area = document.getElementById('formPlotArea').value.trim() || 'Not specified';
-      const service = document.getElementById('formService').value;
+      const selectedServices = Array.from(document.querySelectorAll('.contact-service-check:checked'))
+        .map(cb => cb.value);
+      const service = selectedServices.length > 0 ? selectedServices.join(', ') : (document.getElementById('formService').value || 'Full Turnkey (2D + 3D + RCC)');
       const message = document.getElementById('formMessage').value.trim() || 'Preliminary architectural enquiry';
 
       if (!name || !phone) {
@@ -287,7 +289,7 @@ class BuildconMasterApp {
         `🏢 *Project Type:* ${type}\n` +
         `📍 *Site Location:* ${location}\n` +
         `📐 *Plot / Built-up Area:* ${area}\n` +
-        `🛠️ *Required Service:* ${service}\n` +
+        `🛠️ *Required Disciplines:* ${service}\n` +
         `📝 *Project Details:* ${message}\n\n` +
         `_Submitted via Vishal Jamdhade Buildcon Official Web Portal_`
       );
@@ -300,6 +302,18 @@ class BuildconMasterApp {
         window.open(waUrl, '_blank');
         form.reset();
       }, 1200);
+    });
+
+    // Update 3D checkbox count badge on selection change
+    const contactCbs = document.querySelectorAll('.contact-service-check');
+    const badge = document.getElementById('formServiceCountBadge');
+    contactCbs.forEach(cb => {
+      cb.addEventListener('change', () => {
+        const checkedCount = document.querySelectorAll('.contact-service-check:checked').length;
+        if (badge) {
+          badge.textContent = `${checkedCount} Selected`;
+        }
+      });
     });
   }
 

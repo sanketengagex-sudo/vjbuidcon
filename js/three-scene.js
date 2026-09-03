@@ -110,6 +110,8 @@ class Arch3DViewer {
   buildArchitecturalModel() {
     this.buildingGroup = new THREE.Group();
     this.structuralGroup = new THREE.Group();
+    this.slabsGroup = new THREE.Group();
+    this.facadeGroup = new THREE.Group();
     this.blueprintLinesGroup = new THREE.Group();
 
     // 1. Base / Plinth
@@ -118,7 +120,7 @@ class Arch3DViewer {
     const plinth = new THREE.Mesh(plinthGeo, plinthMat);
     plinth.position.y = 0.4;
     plinth.receiveShadow = true;
-    this.buildingGroup.add(plinth);
+    this.slabsGroup.add(plinth);
 
     // 2. Ground Floor Living Volume
     const gfGeo = new THREE.BoxGeometry(15, 4.2, 11);
@@ -141,7 +143,7 @@ class Arch3DViewer {
     });
     const glassFront = new THREE.Mesh(glassGeo, glassMat);
     glassFront.position.set(-0.5, 2.8, 5.55);
-    this.buildingGroup.add(glassFront);
+    this.facadeGroup.add(glassFront);
 
     // 4. First Floor Cantilevered Slab
     const slab1Geo = new THREE.BoxGeometry(17, 0.5, 13);
@@ -149,7 +151,7 @@ class Arch3DViewer {
     const slab1 = new THREE.Mesh(slab1Geo, slab1Mat);
     slab1.position.set(0, 5.25, 0.5);
     slab1.castShadow = true;
-    this.buildingGroup.add(slab1);
+    this.slabsGroup.add(slab1);
 
     // 5. First Floor Master Volume (Set back asymmetrically)
     const ffGeo = new THREE.BoxGeometry(12, 3.8, 9);
@@ -164,7 +166,7 @@ class Arch3DViewer {
     const balconyGlassGeo = new THREE.BoxGeometry(7, 1.1, 0.1);
     const balconyGlass = new THREE.Mesh(balconyGlassGeo, glassMat);
     balconyGlass.position.set(-3.5, 6.1, 5.8);
-    this.buildingGroup.add(balconyGlass);
+    this.facadeGroup.add(balconyGlass);
 
     // 7. Roof Terrace Cantilevered Canopy (Modern Floating Roof)
     const roofGeo = new THREE.BoxGeometry(14, 0.4, 11);
@@ -172,7 +174,7 @@ class Arch3DViewer {
     const roofMesh = new THREE.Mesh(roofGeo, roofMat);
     roofMesh.position.set(1.5, 9.5, 0.5);
     roofMesh.castShadow = true;
-    this.buildingGroup.add(roofMesh);
+    this.slabsGroup.add(roofMesh);
 
     // 8. Teak Architectural Louvers (Wood Accents)
     const woodMat = new THREE.MeshStandardMaterial({ color: 0x8b5a2b, roughness: 0.7 });
@@ -181,8 +183,11 @@ class Arch3DViewer {
       const louver = new THREE.Mesh(louverGeo, woodMat);
       louver.position.set(-4.2 + i * 0.4, 7.4, 4.6);
       louver.castShadow = true;
-      this.buildingGroup.add(louver);
+      this.facadeGroup.add(louver);
     }
+
+    this.buildingGroup.add(this.slabsGroup);
+    this.buildingGroup.add(this.facadeGroup);
 
     // --- STRUCTURAL SKELETON (RCC Footings, Columns, Beams, Slabs) ---
     const colGeo = new THREE.BoxGeometry(0.5, 9.5, 0.5);
@@ -477,6 +482,24 @@ class Arch3DViewer {
         document.getElementById('hotspotDetailCard').classList.remove('active');
       });
     }
+
+    // 3D Layer Checkbox Toggles
+    const layerToggles = document.querySelectorAll('.layer-3d-toggle');
+    layerToggles.forEach(toggle => {
+      toggle.addEventListener('change', (e) => {
+        const layer = e.target.dataset.layer;
+        const isChecked = e.target.checked;
+        if (layer === 'structural') {
+          this.structuralGroup.visible = isChecked;
+        } else if (layer === 'slabs' && this.slabsGroup) {
+          this.slabsGroup.visible = isChecked;
+        } else if (layer === 'facade' && this.facadeGroup) {
+          this.facadeGroup.visible = isChecked;
+        } else if (layer === 'grid' && this.gridHelper) {
+          this.gridHelper.visible = isChecked;
+        }
+      });
+    });
   }
 
   bindEvents() {

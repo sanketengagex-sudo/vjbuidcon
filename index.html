@@ -79,10 +79,10 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation Menu -->
+      <!-- Desktop Navigation Menu (Guaranteed Single-Line Fit) -->
       <nav class="nav-menu" id="desktopNav" aria-label="Main Navigation">
         <a href="#home" class="nav-link active" data-i18n="nav_home">Home</a>
-        <a href="#about" class="nav-link" data-i18n="nav_about">About Us</a>
+        <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
         <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
         <a href="#experience3d" class="nav-link">3D Studio</a>
         <a href="#showcase" class="nav-link" data-i18n="nav_showcase">Lifecycle</a>
@@ -90,7 +90,6 @@
         <a href="#structural" class="nav-link" data-i18n="nav_structural">Structural</a>
         <a href="#estimator" class="nav-link" data-i18n="nav_estimator">Estimator</a>
         <a href="#process" class="nav-link" data-i18n="nav_process">Process</a>
-        <a href="#faq" class="nav-link" data-i18n="nav_faq">FAQ</a>
         <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
       </nav>
 
@@ -419,6 +418,42 @@
             <h4 id="hotspotCardTitle" style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 0.5rem;"></h4>
             <p id="hotspotCardDesc" style="font-size: 0.85rem; color: #CCCCCC; line-height: 1.6;"></p>
           </div>
+        </div>
+
+        <!-- 3D Layer Inspection Toolbar with Tactile 3D Checkboxes -->
+        <div class="three-layers-bar">
+          <span class="three-layers-title">3D LAYERS:</span>
+          <label class="checkbox-3d-wrap" title="Toggle RCC Columns and Footings">
+            <input type="checkbox" class="checkbox-3d-input layer-3d-toggle" data-layer="structural" checked>
+            <span class="checkbox-3d-box">
+              <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+            </span>
+            <span class="checkbox-3d-text">RCC Columns & Footings</span>
+          </label>
+
+          <label class="checkbox-3d-wrap" title="Toggle Cantilevered Slabs and Beams">
+            <input type="checkbox" class="checkbox-3d-input layer-3d-toggle" data-layer="slabs" checked>
+            <span class="checkbox-3d-box">
+              <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+            </span>
+            <span class="checkbox-3d-text">Cantilevered Slabs</span>
+          </label>
+
+          <label class="checkbox-3d-wrap" title="Toggle Glass Facade & Teak Louvers">
+            <input type="checkbox" class="checkbox-3d-input layer-3d-toggle" data-layer="facade" checked>
+            <span class="checkbox-3d-box">
+              <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+            </span>
+            <span class="checkbox-3d-text">Glass & Louvers</span>
+          </label>
+
+          <label class="checkbox-3d-wrap" title="Toggle CAD Metric Grid">
+            <input type="checkbox" class="checkbox-3d-input layer-3d-toggle" data-layer="grid" checked>
+            <span class="checkbox-3d-box">
+              <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+            </span>
+            <span class="checkbox-3d-text">CAD Coordinate Grid</span>
+          </label>
         </div>
       </div>
     </section>
@@ -929,31 +964,115 @@
                 </div>
               </div>
 
-              <!-- Step 3: Package Options -->
+              <!-- Step 3: Package Options with 3D Checkbox Cards -->
               <div class="calc-group">
                 <label class="calc-label" data-i18n="est_pkg_label">3. Required Engineering Package</label>
                 <div class="service-options-group">
-                  <label class="service-option-item">
-                    <input type="radio" name="calcPackage" value="plan2d" class="service-option-radio">
-                    <div>
-                      <strong style="display: block; font-size: 0.95rem; color: #111111;">2D Planning + Architectural Drawings</strong>
-                      <span style="font-size: 0.8rem; color: #666666;">Floor plans, room layouts, dimensioned working blueprints</span>
+                  <label class="checkbox-3d-card checkbox-3d-card-light service-option-item">
+                    <input type="radio" name="calcPackage" value="plan2d" class="checkbox-3d-input service-option-radio">
+                    <span class="checkbox-3d-box checkbox-3d-box-light">
+                      <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                    </span>
+                    <div class="checkbox-card-info">
+                      <strong>2D Planning + Architectural Drawings</strong>
+                      <span>Floor plans, room layouts, dimensioned working blueprints</span>
                     </div>
                   </label>
 
-                  <label class="service-option-item">
-                    <input type="radio" name="calcPackage" value="plan3d" class="service-option-radio">
-                    <div>
-                      <strong style="display: block; font-size: 0.95rem; color: #111111;">2D Planning + 3D Realistic Elevations</strong>
-                      <span style="font-size: 0.8rem; color: #666666;">Floor plans + exterior facade renders and color schemes</span>
+                  <label class="checkbox-3d-card checkbox-3d-card-light service-option-item">
+                    <input type="radio" name="calcPackage" value="plan3d" class="checkbox-3d-input service-option-radio">
+                    <span class="checkbox-3d-box checkbox-3d-box-light">
+                      <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                    </span>
+                    <div class="checkbox-card-info">
+                      <strong>2D Planning + 3D Realistic Elevations</strong>
+                      <span>Floor plans + exterior facade renders and color schemes</span>
                     </div>
                   </label>
 
-                  <label class="service-option-item selected">
-                    <input type="radio" name="calcPackage" value="full" class="service-option-radio" checked>
-                    <div>
-                      <strong style="display: block; font-size: 0.95rem; color: var(--gold-dark);">Full Turnkey: 2D + 3D + RCC Structural + BOQ</strong>
-                      <span style="font-size: 0.8rem; color: #666666;">Complete architecture, computerized RCC structural analysis & BOQ</span>
+                  <label class="checkbox-3d-card checkbox-3d-card-light service-option-item selected">
+                    <input type="radio" name="calcPackage" value="full" class="checkbox-3d-input service-option-radio" checked>
+                    <span class="checkbox-3d-box checkbox-3d-box-light">
+                      <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                    </span>
+                    <div class="checkbox-card-info">
+                      <strong style="color: var(--gold-dark);">Full Turnkey: 2D + 3D + RCC Structural + BOQ</strong>
+                      <span>Complete architecture, computerized RCC structural analysis & BOQ</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 4: Interactive Scope & Deliverables with 3D Checkboxes -->
+              <div class="calc-group" style="margin-top: 1.75rem;">
+                <label class="calc-label">
+                  <span>4. Customize Scope & Deliverables</span>
+                  <span class="value-pill" id="addonCountBadge">6 Active</span>
+                </label>
+                <div class="checkbox-3d-grid">
+                  <label class="checkbox-3d-card checkbox-3d-card-light">
+                    <input type="checkbox" class="checkbox-3d-input est-addon-check" data-addon-id="vastu" checked>
+                    <span class="checkbox-3d-box checkbox-3d-box-light">
+                      <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                    </span>
+                    <div class="checkbox-card-info">
+                      <strong style="font-size: 0.88rem;">Vastu Harmony Alignment</strong>
+                      <span style="font-size: 0.74rem;">Natural light, airflow & energy flow</span>
+                    </div>
+                  </label>
+
+                  <label class="checkbox-3d-card checkbox-3d-card-light">
+                    <input type="checkbox" class="checkbox-3d-input est-addon-check" data-addon-id="dusk" checked>
+                    <span class="checkbox-3d-box checkbox-3d-box-light">
+                      <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                    </span>
+                    <div class="checkbox-card-info">
+                      <strong style="font-size: 0.88rem;">Dusk & Twilight 3D Renders</strong>
+                      <span style="font-size: 0.74rem;">Facade lighting & landscape texture</span>
+                    </div>
+                  </label>
+
+                  <label class="checkbox-3d-card checkbox-3d-card-light">
+                    <input type="checkbox" class="checkbox-3d-input est-addon-check" data-addon-id="seismic" checked>
+                    <span class="checkbox-3d-box checkbox-3d-box-light">
+                      <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                    </span>
+                    <div class="checkbox-card-info">
+                      <strong style="font-size: 0.88rem;">IS 1893 Seismic Analysis</strong>
+                      <span style="font-size: 0.74rem;">Earthquake resistant column/beam FEA</span>
+                    </div>
+                  </label>
+
+                  <label class="checkbox-3d-card checkbox-3d-card-light">
+                    <input type="checkbox" class="checkbox-3d-input est-addon-check" data-addon-id="gfc" checked>
+                    <span class="checkbox-3d-box checkbox-3d-box-light">
+                      <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                    </span>
+                    <div class="checkbox-card-info">
+                      <strong style="font-size: 0.88rem;">GFC Working Drawings</strong>
+                      <span style="font-size: 0.74rem;">Zero site ambiguity construction sets</span>
+                    </div>
+                  </label>
+
+                  <label class="checkbox-3d-card checkbox-3d-card-light">
+                    <input type="checkbox" class="checkbox-3d-input est-addon-check" data-addon-id="boq" checked>
+                    <span class="checkbox-3d-box checkbox-3d-box-light">
+                      <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                    </span>
+                    <div class="checkbox-card-info">
+                      <strong style="font-size: 0.88rem;">Steel Rebar BBS & BOQ</strong>
+                      <span style="font-size: 0.74rem;">10-15% material cost optimization</span>
+                    </div>
+                  </label>
+
+                  <label class="checkbox-3d-card checkbox-3d-card-light">
+                    <input type="checkbox" class="checkbox-3d-input est-addon-check" data-addon-id="sanction" checked>
+                    <span class="checkbox-3d-box checkbox-3d-box-light">
+                      <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                    </span>
+                    <div class="checkbox-card-info">
+                      <strong style="font-size: 0.88rem;">Municipal Sanction Sets</strong>
+                      <span style="font-size: 0.74rem;">FAR / FSI & setback compliance</span>
                     </div>
                   </label>
                 </div>
@@ -1384,19 +1503,81 @@
                   <input type="text" id="formPlotArea" class="form-input" placeholder="e.g. 2,500 Sq.Ft">
                 </div>
 
-                <!-- Service Required -->
+                <!-- Service Required 3D Checkbox Matrix -->
                 <div class="form-group full-width">
-                  <label class="form-label" for="formService" data-i18n="form_service">Required Service</label>
-                  <select id="formService" class="form-select">
-                    <option value="Full Turnkey (2D + 3D + RCC)">Complete Turnkey (2D Planning + 3D Visualization + RCC Structural Design)</option>
-                    <option value="2D Planning">2D Planning & Architectural Floor Plans</option>
-                    <option value="3D Design">3D Design & Elevation Rendering</option>
-                    <option value="RCC Structural Design">RCC Structural Design & Analysis</option>
-                    <option value="Steel Structure Design">Steel Structure & Warehouse Design</option>
-                    <option value="Working Drawings">Working & Construction Drawings (GFC)</option>
-                    <option value="Estimation & BOQ">Quantity Estimation & BOQ</option>
-                    <option value="Site Consultation">Site Visit & Technical Consultation</option>
-                  </select>
+                  <label class="form-label" style="display: flex; justify-content: space-between; align-items: center;">
+                    <span data-i18n="form_service">Required Services (Select with 3D Checkbox)</span>
+                    <span class="value-pill" id="formServiceCountBadge" style="font-size: 0.72rem;">Multi-Select</span>
+                  </label>
+                  <div class="checkbox-3d-grid" style="margin-top: 0.5rem;">
+                    <label class="checkbox-3d-card">
+                      <input type="checkbox" class="checkbox-3d-input contact-service-check" value="2D Architectural Planning" checked>
+                      <span class="checkbox-3d-box">
+                        <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                      </span>
+                      <div class="checkbox-card-info">
+                        <strong>2D Planning & Floor Plans</strong>
+                        <span>Room layouts, dimension schedules, Vastu compliance</span>
+                      </div>
+                    </label>
+
+                    <label class="checkbox-3d-card">
+                      <input type="checkbox" class="checkbox-3d-input contact-service-check" value="3D Architectural Visualization" checked>
+                      <span class="checkbox-3d-box">
+                        <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                      </span>
+                      <div class="checkbox-card-info">
+                        <strong>3D Elevation & Visualization</strong>
+                        <span>Photorealistic dusk/day exterior facade renders</span>
+                      </div>
+                    </label>
+
+                    <label class="checkbox-3d-card">
+                      <input type="checkbox" class="checkbox-3d-input contact-service-check" value="RCC Structural Design & Analysis" checked>
+                      <span class="checkbox-3d-box">
+                        <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                      </span>
+                      <div class="checkbox-card-info">
+                        <strong>RCC Structural Design</strong>
+                        <span>FEA load modeling, footings, columns, IS 1893 seismic</span>
+                      </div>
+                    </label>
+
+                    <label class="checkbox-3d-card">
+                      <input type="checkbox" class="checkbox-3d-input contact-service-check" value="Steel Structure & PEB Sheds">
+                      <span class="checkbox-3d-box">
+                        <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                      </span>
+                      <div class="checkbox-card-info">
+                        <strong>Steel Structure & PEB Sheds</strong>
+                        <span>Industrial warehouse portals, anchor bolts, trusses</span>
+                      </div>
+                    </label>
+
+                    <label class="checkbox-3d-card">
+                      <input type="checkbox" class="checkbox-3d-input contact-service-check" value="Working Drawings (GFC)">
+                      <span class="checkbox-3d-box">
+                        <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                      </span>
+                      <div class="checkbox-card-info">
+                        <strong>Working Drawings (GFC Sets)</strong>
+                        <span>Electrical conduits, plumbing, joinery schedules</span>
+                      </div>
+                    </label>
+
+                    <label class="checkbox-3d-card">
+                      <input type="checkbox" class="checkbox-3d-input contact-service-check" value="Quantity Estimation & BOQ">
+                      <span class="checkbox-3d-box">
+                        <svg class="checkbox-3d-icon" viewBox="0 0 12 10"><polyline points="1.5 5 4.5 8 10.5 2"></polyline></svg>
+                      </span>
+                      <div class="checkbox-card-info">
+                        <strong>Quantity Estimation & BOQ</strong>
+                        <span>Bar bending schedules, material takeoffs, budgeting</span>
+                      </div>
+                    </label>
+                  </div>
+                  <!-- Hidden input to maintain JS estimator transfer compatibility -->
+                  <input type="hidden" id="formService" value="Full Turnkey (2D + 3D + RCC)">
                 </div>
 
                 <!-- Project Details -->

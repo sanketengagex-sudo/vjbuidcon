@@ -99,12 +99,28 @@ const projectEstimator = {
       });
     });
 
+    // 3D Checkbox Deliverable Add-ons
+    const addonCheckboxes = document.querySelectorAll('.est-addon-check');
+    addonCheckboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        this.updateAddonCount();
+      });
+    });
+
     // Transfer button
     const applyEstimateBtn = document.getElementById('applyEstimateBtn');
     if (applyEstimateBtn) {
       applyEstimateBtn.addEventListener('click', () => {
         this.transferToContactForm();
       });
+    }
+  },
+
+  updateAddonCount() {
+    const addonCheckboxes = document.querySelectorAll('.est-addon-check:checked');
+    const badge = document.getElementById('addonCountBadge');
+    if (badge) {
+      badge.textContent = `${addonCheckboxes.length} Active`;
     }
   },
 
@@ -142,6 +158,8 @@ const projectEstimator = {
         </li>
       `).join('');
     }
+
+    this.updateAddonCount();
   },
 
   transferToContactForm() {
@@ -158,14 +176,27 @@ const projectEstimator = {
     };
 
     const serviceLabels = {
-      plan2d: '2D Planning',
-      plan3d: '3D Design',
+      plan2d: '2D Architectural Planning',
+      plan3d: '3D Architectural Visualization',
       full: 'Full Turnkey (2D + 3D + RCC)'
     };
 
     if (formType) formType.value = typeLabels[this.currentType] || 'Bungalow';
     if (formArea) formArea.value = `${this.currentArea} sq.ft`;
     if (formService) formService.value = serviceLabels[this.currentPackage] || 'Full Turnkey (2D + 3D + RCC)';
+
+    // Synchronize 3D checkboxes in contact form
+    const contactCbs = document.querySelectorAll('.contact-service-check');
+    contactCbs.forEach(cb => {
+      if (this.currentPackage === 'plan2d') {
+        cb.checked = (cb.value.includes('2D') || cb.value.includes('Working'));
+      } else if (this.currentPackage === 'plan3d') {
+        cb.checked = (cb.value.includes('2D') || cb.value.includes('3D'));
+      } else {
+        cb.checked = true;
+      }
+    });
+
     if (formMsg) {
       formMsg.value = `Hello Vishal Jamdhade Buildcon, I calculated an estimate for my ${typeLabels[this.currentType]} project (${this.currentArea} sq.ft) requiring ${serviceLabels[this.currentPackage]}. Please provide an official architectural and structural engineering proposal.`;
     }
@@ -176,7 +207,7 @@ const projectEstimator = {
     }
 
     if (window.showSiteToast) {
-      window.showSiteToast("Estimator details transferred to the enquiry form below!");
+      window.showSiteToast("Estimator details transferred to enquiry form below!");
     }
   }
 };
