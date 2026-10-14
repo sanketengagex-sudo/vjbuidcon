@@ -5,7 +5,7 @@ echo ==============================================================
 echo  Packaging Vishal Jamdhade Buildcon for Hostinger Hosting
 echo ==============================================================
 
-powershell -ExecutionPolicy Bypass -Command "Compress-Archive -Path 'index.html', 'favicon.ico', 'favicon.svg', 'css', 'js', 'assets' -DestinationPath 'vishaljamdhadebuildcon-website.zip' -Force"
+powershell -ExecutionPolicy Bypass -Command "Compress-Archive -Path 'index.html', 'favicon.ico', 'favicon.svg', 'robots.txt', 'sitemap.xml', 'site.webmanifest', 'CNAME', 'css', 'js', 'assets', '.htaccess' -DestinationPath 'vishaljamdhadebuildcon-website.zip' -Force"
 
 echo.
 echo ==============================================================

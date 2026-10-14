@@ -5,6 +5,7 @@
 /* --- SECTION PADDING & GENERAL STYLES --- */
 .site-section {
   position: relative;
+  width: 100%;
   padding: var(--section-pad-desktop);
   overflow: hidden;
 }
@@ -37,6 +38,7 @@
    ========================================================================== */
 .hero-section {
   position: relative;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -876,6 +878,7 @@
    16. FOOTER (DARK #0A0A0A)
    ========================================================================== */
 .site-footer {
+  width: 100%;
   background-color: #0A0A0A;
   color: #888888;
   border-top: 1px solid var(--border-dark-subtle);

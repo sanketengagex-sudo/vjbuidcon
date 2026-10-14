@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main Homepage & Canonical URL -->
+  <url>
+    <loc>https://vishaljamdhadebuildcon.com/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Google Image Search indexing tags -->
+    <image:image>
+      <image:loc>https://vishaljamdhadebuildcon.com/assets/images/hero_luxury_villa.jpg</image:loc>
+      <image:title>Luxury Contemporary Bungalow Villa Architectural Design by Vishal Jamdhade Buildcon</image:title>
+      <image:caption>Top architectural planning and 3D elevation design in Ahilyanagar and Pune</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://vishaljamdhadebuildcon.com/assets/images/elevation_3d.jpg</image:loc>
+      <image:title>Modern 3D Front Elevation Residential Bungalow Design in Ahilyanagar</image:title>
+      <image:caption>High definition photorealistic 3D exterior visualization and architectural rendering</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://vishaljamdhadebuildcon.com/assets/images/rcc_structural_model.jpg</image:loc>
+      <image:title>RCC Structural Design &amp; FEA Earthquake Analysis by Vishal Jamdhade Buildcon</image:title>
+      <image:caption>IS 456 and IS 1893 compliant column beam reinforcement design</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://vishaljamdhadebuildcon.com/assets/images/cad_floor_plan.jpg</image:loc>
+      <image:title>2D CAD Floor Plan &amp; Vastu Compliant Architectural Blueprint</image:title>
+      <image:caption>Precise construction drawings, room dimensions and municipal sanction plans</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://vishaljamdhadebuildcon.com/assets/images/commercial_complex.jpg</image:loc>
+      <image:title>Commercial Complex &amp; Retail Showroom Architectural Planning</image:title>
+      <image:caption>Modern commercial architecture and structural consulting in Pune and Ahilyanagar</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://vishaljamdhadebuildcon.com/assets/images/industrial_warehouse.jpg</image:loc>
+      <image:title>PEB Industrial Warehouse &amp; Steel Factory Shed Structural Design</image:title>
+      <image:caption>Heavy structural steel frame, portal trusses, and fabrication blueprints</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://vishaljamdhadebuildcon.com/assets/images/completed_bungalow.jpg</image:loc>
+      <image:title>Completed Residential Duplex Villa Architecture Project in Maharashtra</image:title>
+      <image:caption>From blueprint to built with turnkey architectural and structural supervision</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://vishaljamdhadebuildcon.com/assets/images/architectural_blueprint_fea.jpg</image:loc>
+      <image:title>Finite Element Analysis FEA Structural Engineering Blueprint</image:title>
+      <image:caption>Certified structural calculations for wind, earthquake, and dead-live load resistance</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://vishaljamdhadebuildcon.com/assets/images/hero_render.jpg</image:loc>
+      <image:title>Contemporary Villa Architecture &amp; Structural Model</image:title>
+      <image:caption>Integrated architectural design and engineering excellence</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

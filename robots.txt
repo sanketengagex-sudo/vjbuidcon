@@ -1,0 +1,21 @@
+# ==============================================================
+# Robots.txt for Vishal Jamdhade Buildcon
+# Website: https://vishaljamdhadebuildcon.com
+# ==============================================================
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Disallow internal build, deploy scripts & zip archives
+Disallow: /push.bat
+Disallow: /push.ps1
+Disallow: /server.ps1
+Disallow: /start-server.bat
+Disallow: /package-zip.bat
+Disallow: /vishaljamdhadebuildcon-website.zip
+
+# XML Sitemap
+Sitemap: https://vishaljamdhadebuildcon.com/sitemap.xml

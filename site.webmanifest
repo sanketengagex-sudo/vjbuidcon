@@ -1,0 +1,21 @@
+{
+  "name": "Vishal Jamdhade Buildcon",
+  "short_name": "VJ Buildcon",
+  "description": "Premier Architectural Planning, 3D Elevation & Structural Engineering Consultancy in Ahilyanagar & Pune",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0D11",
+  "theme_color": "#C9A86A",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

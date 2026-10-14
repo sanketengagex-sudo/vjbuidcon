@@ -71,7 +71,7 @@ const caseStudiesData = {
     id: 4,
     title: "Anand Nilayam Luxury Bungalow",
     category: "Residential Bungalow",
-    location: "Nashik, Maharashtra",
+    location: "Ahilyanagar, Maharashtra",
     plotArea: "3,800 Sq.Ft",
     builtupArea: "4,400 Sq.Ft",
     floors: "G + 1 Floor",

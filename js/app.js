@@ -72,6 +72,7 @@ class BuildconMasterApp {
     this.setupFileUpload();
     this.setupWhatsAppButtons();
     this.setupSmoothScrollLinks();
+    this.setupMapSwitcher();
 
     // Initialize sub-modules
     if (typeof caseStudyModal !== 'undefined') caseStudyModal.init();
@@ -390,6 +391,29 @@ class BuildconMasterApp {
             top: targetPos,
             behavior: 'smooth'
           });
+        }
+      });
+    });
+  }
+
+  // Office Location Map Switcher (Ahilyanagar & Pune)
+  setupMapSwitcher() {
+    const mapBtns = document.querySelectorAll('.map-tab-btn');
+    const mapFrame = document.getElementById('contactMapFrame');
+    if (!mapBtns.length || !mapFrame) return;
+
+    const mapUrls = {
+      ahilyanagar: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120562.43391740924!2d74.67509163273155!3d19.102220790757753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcb05d46788921%3A0x6677e92c1a5181b6!2sAhilya%20Nagar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+      pune: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.04711153715!2d73.7929267954157!3d18.52459859957088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d082e33!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+    };
+
+    mapBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        mapBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const target = btn.dataset.map;
+        if (mapUrls[target]) {
+          mapFrame.src = mapUrls[target];
         }
       });
     });

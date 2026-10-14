@@ -71,8 +71,8 @@
   --transition-slow: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 
   /* --- Layout & Spacing --- */
-  --container-max: 1360px;
-  --container-narrow: 1100px;
+  --container-max: 100%;
+  --container-narrow: 100%;
   --section-pad-desktop: 120px 0;
   --section-pad-tablet: 90px 0;
   --section-pad-mobile: 65px 0;
@@ -91,6 +91,8 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  width: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -98,6 +100,10 @@ body {
   color: var(--text-light-body);
   background-color: var(--bg-dark-primary);
   line-height: 1.65;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -144,8 +150,8 @@ button {
   max-width: var(--container-max);
   margin-left: auto;
   margin-right: auto;
-  padding-left: clamp(1.25rem, 3vw, 2.5rem);
-  padding-right: clamp(1.25rem, 3vw, 2.5rem);
+  padding-left: clamp(1.25rem, 3.5vw, 4rem);
+  padding-right: clamp(1.25rem, 3.5vw, 4rem);
 }
 
 .container-narrow {
@@ -153,8 +159,8 @@ button {
   max-width: var(--container-narrow);
   margin-left: auto;
   margin-right: auto;
-  padding-left: clamp(1.25rem, 3vw, 2.5rem);
-  padding-right: clamp(1.25rem, 3vw, 2.5rem);
+  padding-left: clamp(1.25rem, 3.5vw, 4rem);
+  padding-right: clamp(1.25rem, 3.5vw, 4rem);
 }
 
 /* ==========================================================================
